@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+    SpriteRenderer sRenderer;
+    CircleCollider2D coll;
+
+    [SerializeField,Header("再出現時間")] float displayTime = 0; 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+       sRenderer = GetComponent<SpriteRenderer>();
+        coll = GetComponent<CircleCollider2D>();
+
     }
 
     // Update is called once per frame
@@ -20,7 +27,15 @@ public class Coin : MonoBehaviour
     {
         if(col.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            sRenderer.enabled = false;
+            coll.enabled = false;
+            Invoke("OnEnabled", displayTime);
         }
+    }
+
+    void OnEnabled()
+    {
+        sRenderer.enabled = true;
+        coll.enabled = true;
     }
 }
