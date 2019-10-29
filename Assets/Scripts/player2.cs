@@ -26,8 +26,8 @@ public class player2 : MonoBehaviour
     void Update()
     {
         Debug.Log((int)playerno);
-        float x = Input.GetAxisRaw("Horizontal"  +(int)playerno);
-        float y = Input.GetAxisRaw("Vertical1");
+        float x = Input.GetAxisRaw("Horizontal" + (int)playerno);
+        float y = Input.GetAxisRaw("Vertical" + (int)playerno);
         Vector2 dir = new Vector2(x, y).normalized;
         GetComponent<Rigidbody2D>().velocity = dir * speed;
     }
