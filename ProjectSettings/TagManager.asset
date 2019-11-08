@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - Floor
+  - Character
   layers:
   - Default
   - TransparentFX
@@ -48,6 +49,9 @@ TagManager:
     locked: 0
   - name: Stage
     uniqueID: 2912758495
+    locked: 0
+  - name: Item
+    uniqueID: 3227099929
     locked: 0
   - name: Player
     uniqueID: 4045223735
