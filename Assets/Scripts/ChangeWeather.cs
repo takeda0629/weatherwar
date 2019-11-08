@@ -24,7 +24,7 @@ public class ChangeWeather : MonoBehaviour
 
     void Start()
     {
-        cMAX = GameObject.Find("").gameObject.GetComponent<Timer>().totalTime / 2;//enumの中身の数参照できるように改造予定。できないなら書き換え忘れないように注意
+        cMAX = GameObject.Find("Timer").gameObject.GetComponent<Timer>().totalTime / 2;//enumの中身の数参照できるように改造予定。できないなら書き換え忘れないように注意
         cCounter = 0;
         addSaving = 0;
 
@@ -35,6 +35,7 @@ public class ChangeWeather : MonoBehaviour
     //更新処理
     void Update()
     {
+        Debug.Log(cMAX+"秒");
         //cCounterのカウントアップ処理
         cCounter += Time.deltaTime;
         if(addSaving != 0)
@@ -46,8 +47,9 @@ public class ChangeWeather : MonoBehaviour
         if(cCounter >= cMAX)
         {
             Wchange();
+            cCounter = 0;
         }
-
+       
     }
 
     public void changeSprite()
@@ -73,14 +75,14 @@ public class ChangeWeather : MonoBehaviour
         {
             case Weather.sun://現在晴れ
                 {
-                    gameObject.GetComponent<Image>().sprite = sprite2;//雨用スプライトに切り替え
+                    this.gameObject.GetComponent<SpriteRenderer>().sprite = sprite2;//雨用スプライトに切り替え
                     weather = Weather.rain;//ステータスを雨に変更
                     break;
                 }
 
             case Weather.rain://現在雨
                 {
-                    gameObject.GetComponent<Image>().sprite = sprite1;//晴れ用スプライトに切り替え
+                    this.gameObject.GetComponent<SpriteRenderer>().sprite = sprite1;//晴れ用スプライトに切り替え
                     weather = Weather.sun;//ステータスを晴れに変更
                     break;
                 }
