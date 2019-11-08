@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    private float totalTime;
+    public float totalTime;
     [SerializeField]
     public int minute;
     [SerializeField]
