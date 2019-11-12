@@ -3332,7 +3332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1495564798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3345,8 +3345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e994df455fb8648a3c69cae01634f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite1: {fileID: 21300000, guid: 1f2cc40d32bb48444bd64699a8b55efb, type: 3}
-  sprite2: {fileID: 21300000, guid: fe1db27ab55f5ae428782b15347b6cd2, type: 3}
+  sprite1: {fileID: 21300000, guid: 6bdab3145c228c74a87e7a6493ab4ce8, type: 3}
+  sprite2: {fileID: 21300000, guid: 00ea4305f5bfdd148a648bd7d85578a3, type: 3}
   addSaving: 0
   weather: 0
 --- !u!212 &1495564799
@@ -4311,7 +4311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807153f9e2ef50742806811949f92979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 0
+  totalTime: 120
   minute: 2
   seconds: 0
 --- !u!114 &2125545982
