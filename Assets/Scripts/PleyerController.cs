@@ -5,14 +5,28 @@ using UnityEngine;
 public class PleyerController : MonoBehaviour
 {
 
+    public enum PlayerNo
+    {
+        p1 = 1,
+        p2 = 2,
+        p3 = 3,
+        p4 = 4
+    }
+    private GameObject _parent;
+    private int pNum;
+
     [SerializeField] float speed = 8.0f;
     private Rigidbody2D rb;
     public bool isSelectFlag = false;
-
+    [SerializeField] PlayerNo playerNo;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        _parent = transform.root.gameObject;
+
+        pNum = _parent.GetComponent<PlayerNoSelect>().num;
     }
 
 
@@ -28,8 +42,10 @@ public class PleyerController : MonoBehaviour
     {
         Vector2 velocity = rb.velocity;
 
-        float x = Input.GetAxisRaw("Horizontal1");
-        float y = Input.GetAxisRaw("Vertical1");
+       //float x = Input.GetAxisRaw("Horizontal" + (int)playerNo);
+        float x = Input.GetAxisRaw("Horizontal" + pNum);
+        //float y = Input.GetAxisRaw("Vertical" + (int)playerNo);
+        float y = Input.GetAxisRaw("Vertical" + pNum);
         Vector2 dir = new Vector2(x, y).normalized;
         GetComponent<Rigidbody2D>().velocity = dir * speed;
 

@@ -15,6 +15,9 @@ public class PlayerNoSelect : MonoBehaviour
     [SerializeField] PlayerNo playerNo;
     public int num;
 
+    public GameObject obj;
+    GameObject character1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,13 @@ public class PlayerNoSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Vector3 vec3 = this.transform.position;
+
+            character1 = Instantiate(obj, this.transform.position,Quaternion.identity);
+            character1.transform.parent = this.transform;
+        }
     }
 
     public int Renum()
