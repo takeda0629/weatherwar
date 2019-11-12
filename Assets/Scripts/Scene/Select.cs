@@ -45,7 +45,7 @@ public class Select : MonoBehaviour
 
         if(P1 == true && P2 == true && P3 == true && P4 == true)
         {
-            SceneManager.LoadScene("GamePlay");
+            SceneManager.LoadScene("GamePlayScene");
         }
     }
 }

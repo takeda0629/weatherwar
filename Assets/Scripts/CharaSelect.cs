@@ -15,7 +15,7 @@ public class CharaSelect : MonoBehaviour
     }
     [SerializeField] PlayerNo playerNo;
 
-    [SerializeField]  Sprite[] gameChara;
+    [SerializeField] static Sprite[] gameChara;
     private static int selectNo = 0;
 
     private Sprite sprite;
@@ -99,8 +99,8 @@ public class CharaSelect : MonoBehaviour
         return decideFlag;
     }
 
-    //public static Sprite MyChara()
-    //{
-    //    return gameChara[selectNo];
-    //}
+    public static Sprite MyChara()
+    {
+        return gameChara[selectNo];
+    }
 }
