@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class ChangeGravity : MonoBehaviour
 {
-    [SerializeField] private Vector3 localGravity;
-    private Rigidbody rBody;
+
+    //
+    Rigidbody2D rBody;
+
+    float myGravity = -9.81f;
+
+
 
     // Use this for initialization
     private void Start()
     {
-        rBody = this.GetComponent<Rigidbody>();
-        rBody.useGravity = false; //最初にrigidBodyの重力を使わなくする
+        rBody = this.GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
     {
-        SetLocalGravity(); //重力をAddForceでかけるメソッドを呼ぶ。FixedUpdateが好ましい。
+        Vector2 addGravity = new Vector2(0, myGravity);
+
+        rBody.AddForce(addGravity);
     }
 
-    private void SetLocalGravity()
-    {
-        rBody.AddForce(localGravity, ForceMode.Acceleration);
-    }
 }
