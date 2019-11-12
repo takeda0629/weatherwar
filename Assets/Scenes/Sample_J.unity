@@ -3064,6 +3064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite1: {fileID: 21300000, guid: 1f2cc40d32bb48444bd64699a8b55efb, type: 3}
   sprite2: {fileID: 21300000, guid: fe1db27ab55f5ae428782b15347b6cd2, type: 3}
+  sprites: []
   addSaving: 0
   weather: 0
 --- !u!114 &1429277765
@@ -3347,6 +3348,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite1: {fileID: 21300000, guid: 6bdab3145c228c74a87e7a6493ab4ce8, type: 3}
   sprite2: {fileID: 21300000, guid: 00ea4305f5bfdd148a648bd7d85578a3, type: 3}
+  sprites:
+  - {fileID: 21300000, guid: 6bdab3145c228c74a87e7a6493ab4ce8, type: 3}
+  - {fileID: 21300000, guid: 00ea4305f5bfdd148a648bd7d85578a3, type: 3}
+  - {fileID: 21300000, guid: c1ee882d1934a1046a2d923fd6dd8116, type: 3}
+  - {fileID: 21300000, guid: b547c0701a9bd8a4493987b9b57f71b8, type: 3}
   addSaving: 0
   weather: 0
 --- !u!212 &1495564799
