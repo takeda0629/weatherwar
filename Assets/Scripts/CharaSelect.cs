@@ -15,8 +15,8 @@ public class CharaSelect : MonoBehaviour
     }
     [SerializeField] PlayerNo playerNo;
 
-    [SerializeField] Sprite[] gameChara;
-    private int selectNo = 0;
+    [SerializeField] static Sprite[] gameChara;
+    private static int selectNo = 0;
 
     private Sprite sprite;
     [SerializeField] private Image image;
@@ -36,6 +36,7 @@ public class CharaSelect : MonoBehaviour
 
         ChooseCharacter();
         DecidedCharacter();
+        
     }
 
     /// <summary>
@@ -87,5 +88,19 @@ public class CharaSelect : MonoBehaviour
         }
 
         beforeChoose = choose;
+    }
+
+    /// <summary>
+    /// 決定したかどうか
+    /// </summary>
+    /// <returns></returns>
+    public bool IsDecided()
+    {
+        return decideFlag;
+    }
+
+    public static Sprite MyChara()
+    {
+        return gameChara[selectNo];
     }
 }
