@@ -257,8 +257,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -15}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 260, y: -40}
+  m_SizeDelta: {x: 160, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &269837601
 MonoBehaviour:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 25
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -398,6 +398,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   isSelectFlag: 0
+  cct: {fileID: 0}
+  counter: 0
 --- !u!50 &354801377
 Rigidbody2D:
   serializedVersion: 4
@@ -1872,7 +1874,7 @@ GameObject:
   - component: {fileID: 1397853666}
   - component: {fileID: 1397853665}
   m_Layer: 0
-  m_Name: CoinCount
+  m_Name: 1PCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

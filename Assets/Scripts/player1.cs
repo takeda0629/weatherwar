@@ -8,11 +8,18 @@ public class player1 : MonoBehaviour
     [SerializeField] float speed = 8.0f;
     private Rigidbody2D rb;
     public bool isSelectFlag = false;
-    
+    bool getcoin = false;
+
+    GameObject eventSystem;
+
+    public CoinCountText cct;
+    public int counter = 0;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        eventSystem = GameObject.Find("1PCount");
+        cct = eventSystem.GetComponent<CoinCountText>();
     }
 
 
@@ -58,4 +65,15 @@ public class player1 : MonoBehaviour
             isSelectFlag = false;
         }
     }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Item")
+        {
+            cct.coinCount += 1;
+            counter += 1;
+        }
+    }
+
+
 }

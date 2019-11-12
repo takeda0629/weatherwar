@@ -20,8 +20,11 @@ public class CoinCountText : MonoBehaviour
         countText.text = coinCount.ToString();
     }
 
-    public void AddCount(GameObject players)
-    {
-        coinCount += 1;
-    }
+    //public void AddCount(GameObject players)
+    //{
+    //    if (players.CompareTag("Character"))
+    //    {
+    //        coinCount += 1;
+    //    }
+    //}
 }
