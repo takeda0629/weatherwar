@@ -709,6 +709,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNo: 4
+  gameChara:
+  - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
+  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
+  - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
+  - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
   image: {fileID: 982313247}
   decideFlag: 0
 --- !u!1 &1003852739
@@ -799,6 +804,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNo: 2
+  gameChara:
+  - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
+  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
+  - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
+  - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
   image: {fileID: 1003852741}
   decideFlag: 0
 --- !u!1 &1175842155
@@ -1049,6 +1059,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNo: 1
+  gameChara:
+  - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
+  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
+  - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
+  - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
   image: {fileID: 1397374969}
   decideFlag: 0
 --- !u!1 &1412226989
@@ -1205,6 +1220,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNo: 3
+  gameChara:
+  - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
+  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
+  - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
+  - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
   image: {fileID: 1425005614}
   decideFlag: 0
 --- !u!1 &1478053427
