@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ChangeWeather : MonoBehaviour
 {
+    //ステータス管理用列挙型
     public enum Weather
     {
         sun,
@@ -14,10 +15,6 @@ public class ChangeWeather : MonoBehaviour
         snow,
         Max
     }
-
-
-    public Sprite sprite1; //晴れ
-    public Sprite sprite2; //雨
 
     public Sprite[] sprites;//背景画像用配列
 
@@ -60,25 +57,27 @@ public class ChangeWeather : MonoBehaviour
        
     }
 
-    public void changeSprite()
-    {
-        this.gameObject.GetComponent<Image>().sprite = sprite2;
+    //未使用のためいったんコメントアウト
+    //public void changeSprite()
+    //{
+    //    this.gameObject.GetComponent<Image>().sprite = sprite2;
 
-        if (!chFlg)
-        {
-            this.gameObject.GetComponent<Image>().sprite = sprite2;
-            chFlg = true;
-        }
-        else
-        {
-            this.gameObject.GetComponent<Image>().sprite = sprite1;
-            chFlg = false;
-        }
-    }
+    //    if (!chFlg)
+    //    {
+    //        this.gameObject.GetComponent<Image>().sprite = sprite2;
+    //        chFlg = true;
+    //    }
+    //    else
+    //    {
+    //        this.gameObject.GetComponent<Image>().sprite = sprite1;
+    //        chFlg = false;
+    //    }
+    //}
 
     //天候変更処理
     public void Wchange()
     {
+        //ステータス参照してswitch分岐
         switch(weather)//
         {
             case Weather.sun://現在晴れ
