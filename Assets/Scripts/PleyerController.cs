@@ -9,6 +9,10 @@ public class PleyerController : MonoBehaviour
     private Rigidbody2D rb;
     public bool isSelectFlag = false;
 
+    //bool getcoin = false;
+    //GameObject eventSystem;
+    //public CoinCountText cct;
+    //public int counter = 0;
 
     void Start()
     {

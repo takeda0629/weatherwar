@@ -17,7 +17,7 @@ public class Select : MonoBehaviour
     {
         if (Input.GetButtonDown("LoadButton"))
         {
-            SceneManager.LoadScene("GamePlay");
+            SceneManager.LoadScene("GamePlayScene");
         }
     }
 }

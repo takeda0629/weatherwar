@@ -8,18 +8,17 @@ public class player1 : MonoBehaviour
     [SerializeField] float speed = 8.0f;
     private Rigidbody2D rb;
     public bool isSelectFlag = false;
+
     bool getcoin = false;
-
-    GameObject eventSystem;
-
+    GameObject eventSystem1;
     public CoinCountText cct;
     public int counter = 0;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        eventSystem = GameObject.Find("1PCount");
-        cct = eventSystem.GetComponent<CoinCountText>();
+        eventSystem1 = GameObject.Find("1PCount");
+        cct = eventSystem1.GetComponent<CoinCountText>();
     }
 
 
