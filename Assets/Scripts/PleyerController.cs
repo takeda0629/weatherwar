@@ -42,8 +42,8 @@ public class PleyerController : MonoBehaviour
     {
         Vector2 velocity = rb.velocity;
 
-       //float x = Input.GetAxisRaw("Horizontal" + (int)playerNo);
-        float x = Input.GetAxisRaw("Horizontal" + pNum);
+        //float x = Input.GetAxisRaw("Horizontal" + (int)playerNo);
+        float x = Input.GetAxisRaw("Horizontal" + pNum);//キャラクターセレクト連動
         //float y = Input.GetAxisRaw("Vertical" + (int)playerNo);
         float y = Input.GetAxisRaw("Vertical" + pNum);
         Vector2 dir = new Vector2(x, y).normalized;

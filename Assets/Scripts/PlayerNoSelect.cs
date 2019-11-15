@@ -29,7 +29,7 @@ public class PlayerNoSelect : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Vector3 vec3 = this.transform.position;
+            Vector3 vec3 = this.transform.position;//からオブジェクトの位置
 
             character1 = Instantiate(obj, this.transform.position,Quaternion.identity);
             character1.transform.parent = this.transform;
