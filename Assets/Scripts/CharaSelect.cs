@@ -16,7 +16,8 @@ public class CharaSelect : MonoBehaviour
     [SerializeField] PlayerNo playerNo;
 
     [SerializeField]  Sprite[] gameChara;
-    private static int selectNo = 0;
+    private int selectNo = 0;  //配列の番号
+    public int charaNo = 1;  //キャラ番号
 
     private Sprite sprite;
     [SerializeField] private Image image;
@@ -58,17 +59,22 @@ public class CharaSelect : MonoBehaviour
     /// <summary>
     /// キャラクター選択
     /// </summary>
-    void ChooseCharacter()
+    public void ChooseCharacter()
     {
         float choose = Input.GetAxis("Choose" + (int)playerNo);
-        
+
 
         if (choose > 0 && beforeChoose == 0.0f && decideFlag == false)
         {
             selectNo++;
+            charaNo++;
             if (selectNo > 3)
             {
                 selectNo = 0;
+            }
+            if(charaNo > 4)
+            {
+                charaNo = 1;
             }
             sprite = gameChara[selectNo];
             image = this.GetComponent<Image>();
@@ -78,9 +84,14 @@ public class CharaSelect : MonoBehaviour
         else if (choose < 0 && beforeChoose == 0.0f && decideFlag == false)
         {
             selectNo--;
+            charaNo--;
             if (selectNo < 0)
             {
                 selectNo = 3;
+            }
+            if(charaNo < 1)
+            {
+                charaNo = 4;
             }
             sprite = gameChara[selectNo];
             image = this.GetComponent<Image>();
@@ -99,8 +110,12 @@ public class CharaSelect : MonoBehaviour
         return decideFlag;
     }
 
-    //public static Sprite MyChara()
-    //{
-    //    return gameChara[selectNo];
-    //}
+    /// <summary>
+    /// 選んだキャラ番号の変数を返す
+    /// </summary>
+    /// <returns></returns>
+    public int MyChara()
+    {
+        return charaNo;
+    }
 }
