@@ -315,8 +315,11 @@ GameObject:
   - component: {fileID: 354801377}
   - component: {fileID: 354801378}
   - component: {fileID: 354801376}
+<<<<<<< HEAD
   - component: {fileID: 354801379}
   - component: {fileID: 354801380}
+=======
+>>>>>>> 8352e08722c7440883bd4b6d60b10abd80a5a94d
   m_Layer: 0
   m_Name: "\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC\uFF11"
   m_TagString: Character
@@ -400,8 +403,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   isSelectFlag: 0
+<<<<<<< HEAD
   cct: {fileID: 0}
   counter: 0
+=======
+  playerNo: 1
+>>>>>>> 8352e08722c7440883bd4b6d60b10abd80a5a94d
 --- !u!50 &354801377
 Rigidbody2D:
   serializedVersion: 4
@@ -2143,8 +2150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e994df455fb8648a3c69cae01634f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   sprite1: {fileID: 21300000, guid: 1f2cc40d32bb48444bd64699a8b55efb, type: 3}
   sprite2: {fileID: 21300000, guid: fe1db27ab55f5ae428782b15347b6cd2, type: 3}
+=======
+  sprites: []
+>>>>>>> 8352e08722c7440883bd4b6d60b10abd80a5a94d
   addSaving: 0
   weather: 0
 --- !u!114 &1930414025

@@ -8,7 +8,7 @@ public class ChangeGravity : MonoBehaviour
     //
     Rigidbody2D rBody;
 
-    float myGravity = -9.81f;
+    public float myGravity = -9.81f;
 
 
 

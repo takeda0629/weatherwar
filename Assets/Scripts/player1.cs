@@ -3,16 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class player1 : MonoBehaviour
 {
+    public enum PlayerNo
+    {
+        p1 = 1,
+        p2 = 2,
+        p3 = 3,
+        p4 = 4
+    }
+
     [SerializeField] float speed = 8.0f;
     private Rigidbody2D rb;
     public bool isSelectFlag = false;
+<<<<<<< HEAD
 
     bool getcoin = false;
     GameObject eventSystem1;
     public CoinCountText cct;
     public int counter = 0;
+=======
+    [SerializeField] PlayerNo playerNo;
+>>>>>>> 8352e08722c7440883bd4b6d60b10abd80a5a94d
 
     void Start()
     {
@@ -35,8 +48,8 @@ public class player1 : MonoBehaviour
     {
         Vector2 velocity = rb.velocity;
 
-        float x = Input.GetAxisRaw("Horizontal1");
-        float y = Input.GetAxisRaw("Vertical1");
+        float x = Input.GetAxisRaw("Horizontal" + (int)playerNo);
+        float y = Input.GetAxisRaw("Vertical" + (int)playerNo);
         Vector2 dir = new Vector2(x, y).normalized;
         GetComponent<Rigidbody2D>().velocity = dir * speed;
 
