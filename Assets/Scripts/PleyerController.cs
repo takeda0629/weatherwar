@@ -28,7 +28,7 @@ public class PleyerController : MonoBehaviour
 
         _parent = transform.root.gameObject;
 
-        pNum = _parent.GetComponent<PlayerNoSelect>().num;
+       // pNum = _parent.GetComponent<PlayerNoSelect>().num;
     }
 
 
