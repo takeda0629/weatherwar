@@ -35,6 +35,7 @@ public class PleyerController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        FieldLoop();
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -53,10 +54,11 @@ public class PleyerController : MonoBehaviour
         //float x = Input.GetAxisRaw("Horizontal" + pNum)*speed   ;//キャラクターセレクト連動
         //float y = Input.GetAxisRaw("Vertical" + (int)playerNo);
         //float y = Input.GetAxisRaw("Vertical" + pNum);
-        Vector2 dir = new Vector2(x, velocity.y);
+        Vector2 dir = new Vector2(x , velocity.y);
         this.rb.velocity = dir;
     }
 
+    //ジャンプ
     void Jump()
     {
         Debug.Log("ｼﾞｬﾝﾌﾟ");
@@ -96,4 +98,20 @@ public class PleyerController : MonoBehaviour
         }
     }
 
+    //画面端ループ処理
+    void FieldLoop()
+    {
+        if(rb.transform.position.x>7.4)
+        {
+            Vector3 rbPos = rb.transform.position;
+            rbPos.x = rbPos.x - 15.5f;
+            rb.transform.position = rbPos;
+        }
+         else if (rb.transform.position.x < -7.4)
+        {
+            Vector3 rbPos = rb.transform.position;
+            rbPos.x = rbPos.x + 15.5f;
+            rb.transform.position = rbPos;
+        }
+    }
 }
