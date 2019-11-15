@@ -17,21 +17,19 @@ public class player1 : MonoBehaviour
     [SerializeField] float speed = 8.0f;
     private Rigidbody2D rb;
     public bool isSelectFlag = false;
-<<<<<<< HEAD
+
 
     bool getcoin = false;
-    GameObject eventSystem1;
     public CoinCountText cct;
     public int counter = 0;
-=======
+
     [SerializeField] PlayerNo playerNo;
->>>>>>> 8352e08722c7440883bd4b6d60b10abd80a5a94d
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        eventSystem1 = GameObject.Find("1PCount");
-        cct = eventSystem1.GetComponent<CoinCountText>();
+        //eventSystem1 = GameObject.Find("1PCount");
+        cct = GameObject.Find((int)playerNo + "PCount").GetComponent<CoinCountText>();
     }
 
 

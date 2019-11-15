@@ -20,14 +20,14 @@ public class PleyerController : MonoBehaviour
     public bool isSelectFlag = false;
     [SerializeField] PlayerNo playerNo;
 
-<<<<<<< HEAD
+
     //bool getcoin = false;
     //GameObject eventSystem;
     //public CoinCountText cct;
     //public int counter = 0;
-=======
+
     public float jumpP;
->>>>>>> 8352e08722c7440883bd4b6d60b10abd80a5a94d
+
 
     void Start()
     {
