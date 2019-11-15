@@ -39,6 +39,15 @@ public class player1 : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical1");
         Vector2 dir = new Vector2(x, y).normalized;
         GetComponent<Rigidbody2D>().velocity = dir * speed;
+
+        if (x > 0)  // スティックを右に倒したら
+        {
+            transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);   // 右向き
+        }
+        if (x < 0)  // スティックを左に倒したら
+        {
+            transform.localScale = new Vector3(-1.5f, 1.5f, 1.5f);  // 左向き
+        }
         
     }
 
@@ -75,7 +84,7 @@ public class player1 : MonoBehaviour
         }
     }
 
-    void FieldLoop()
+    void FieldLoop()  // 画面端ループ処理
     {
         if (rb.transform.position.x > 7.4)
         {
