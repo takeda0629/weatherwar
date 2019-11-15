@@ -39,7 +39,7 @@ public class Select : MonoBehaviour
         bool P3 = p3Sel.IsDecided();
         bool P4 = p4Sel.IsDecided();
 
-        if(/*P1 == true &&*/ P2 == true /*&&*//* P3 == true *//*&& P4 == true*/)
+        if(P1 == true &&  P2 == true && P3 == true && P4 == true)
         {
             SceneManager.LoadScene("GamePlay");
         }
