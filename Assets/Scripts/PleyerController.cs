@@ -20,6 +20,8 @@ public class PleyerController : MonoBehaviour
     public bool isSelectFlag = false;
     [SerializeField] PlayerNo playerNo;
 
+    public float jumpP;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,9 +32,14 @@ public class PleyerController : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Jump();
+        }
     }
 
     /// <summary>
@@ -42,13 +49,27 @@ public class PleyerController : MonoBehaviour
     {
         Vector2 velocity = rb.velocity;
 
-        //float x = Input.GetAxisRaw("Horizontal" + (int)playerNo);
-        float x = Input.GetAxisRaw("Horizontal" + pNum);//キャラクターセレクト連動
+        float x = Input.GetAxisRaw("Horizontal" + (int)playerNo)*speed;
+        //float x = Input.GetAxisRaw("Horizontal" + pNum)*speed   ;//キャラクターセレクト連動
         //float y = Input.GetAxisRaw("Vertical" + (int)playerNo);
-        float y = Input.GetAxisRaw("Vertical" + pNum);
-        Vector2 dir = new Vector2(x, y).normalized;
-        GetComponent<Rigidbody2D>().velocity = dir * speed;
+        //float y = Input.GetAxisRaw("Vertical" + pNum);
+        Vector2 dir = new Vector2(x, velocity.y);
+        this.rb.velocity = dir;
+    }
 
+    void Jump()
+    {
+        Debug.Log("ｼﾞｬﾝﾌﾟ");
+        Vector2 vel = rb.velocity;
+
+        vel.y = jumpP;
+
+        //rb.AddForce(Vector2.up*jumpP);
+
+        rb.velocity = vel;
+        
+
+        
     }
 
     void CharaSelect()
