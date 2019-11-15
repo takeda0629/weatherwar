@@ -25,6 +25,7 @@ public class player1 : MonoBehaviour
     void Update()
     {
         Move();
+        FieldLoop();
     }
 
     /// <summary>
@@ -74,5 +75,19 @@ public class player1 : MonoBehaviour
         }
     }
 
-
+    void FieldLoop()
+    {
+        if (rb.transform.position.x > 7.4)
+        {
+            Vector3 rbPos = rb.transform.position;
+            rbPos.x = rbPos.x - 15.5f;
+            rb.transform.position = rbPos;
+        }
+        if (rb.transform.position.x < -7.4)
+        {
+            Vector3 rbPos = rb.transform.position;
+            rbPos.x = rbPos.x + 15.5f;
+            rb.transform.position = rbPos;
+        }
+    }
 }
