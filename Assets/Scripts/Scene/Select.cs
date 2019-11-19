@@ -6,46 +6,59 @@ using UnityEngine.SceneManagement;
 
 public class Select : MonoBehaviour
 {
-    GameObject p1Sel;
-    GameObject p2Sel;
-    GameObject p3Sel;
-    GameObject p4Sel;
+    static CharaSelect p1Sel;
+    static CharaSelect p2Sel;
+    static CharaSelect p3Sel;
+    static CharaSelect p4Sel;
 
-    CharaSelect sel1;
-    CharaSelect sel2;
-    CharaSelect sel3;
-    CharaSelect sel4;
+    
+    public static int[] characters;
 
     // Start is called before the first frame update
     void Start()
     {
-        p1Sel = GameObject.Find("P1Select");
-        p2Sel = GameObject.Find("P2Select");
-        p3Sel = GameObject.Find("P3Select");
-        p4Sel = GameObject.Find("P4Select");
+        p1Sel = GameObject.Find("P1Select").GetComponent<CharaSelect>();
+        p2Sel = GameObject.Find("P2Select").GetComponent<CharaSelect>();
+        p3Sel = GameObject.Find("P3Select").GetComponent<CharaSelect>();
+        p4Sel = GameObject.Find("P4Select").GetComponent<CharaSelect>();
 
-        sel1 = p1Sel.GetComponent<CharaSelect>();
-        sel2 = p2Sel.GetComponent<CharaSelect>();
-        sel3 = p3Sel.GetComponent<CharaSelect>();
-        sel4 = p4Sel.GetComponent<CharaSelect>();
+        characters = new int[4];
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         LoadScene();
     }
 
     void LoadScene()
     {
-        bool P1 = sel1.IsDecided();
-        bool P2 = sel2.IsDecided();
-        bool P3 = sel3.IsDecided();
-        bool P4 = sel4.IsDecided();
+        bool P1 = p1Sel.IsDecided();
+        bool P2 = p2Sel.IsDecided();
+        bool P3 = p3Sel.IsDecided();
+        bool P4 = p4Sel.IsDecided();
 
-        if(P1 == true && P2 == true && P3 == true && P4 == true)
+        if(P1 == true &&  P2 == true && P3 == true && P4 == true)
         {
             SceneManager.LoadScene("GamePlay");
         }
+    }
+
+    public static int[] PlayerSelectChara()
+    {
+        
+        int p1 = p1Sel.MyChara();
+        int p2 = p2Sel.MyChara();
+        int p3 = p3Sel.MyChara();
+        int p4 = p4Sel.MyChara();
+
+        characters[0] = p1;
+        characters[1] = p2;
+        characters[2] = p3;
+        characters[3] = p4;
+
+        return characters;
+
     }
 }
