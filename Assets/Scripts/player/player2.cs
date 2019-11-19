@@ -15,6 +15,11 @@ public class player2 : MonoBehaviour
 
     void Update()
     {
+       
+    }
+
+    public void Move()
+    {
         float x = Input.GetAxisRaw("Horizontal2");
         float y = Input.GetAxisRaw("Vertical2");
         Vector2 dir = new Vector2(x, y).normalized;
