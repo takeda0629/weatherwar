@@ -20,14 +20,16 @@ public class PleyerController : MonoBehaviour
     public bool isSelectFlag = false;
     [SerializeField] PlayerNo playerNo;
 
-
-    //bool getcoin = false;
-    //GameObject eventSystem;
-    //public CoinCountText cct;
-    //public int counter = 0;
+    //コイン関係
+    public CoinCountText cct;
+    public int counter = 0;
 
     public float jumpP;
-    
+
+    [SerializeField] float widthRight;
+    [SerializeField] float widthLeft;
+
+    public float loop;
 
 
     void Start()
@@ -35,8 +37,10 @@ public class PleyerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         _parent = transform.root.gameObject;
-
         pNum = _parent.GetComponent<PlayerNoSelect>().num;
+
+        cct = GameObject.Find(pNum + "PCount").GetComponent<CoinCountText>();
+
     }
 
 
@@ -64,12 +68,20 @@ public class PleyerController : MonoBehaviour
         //float y = Input.GetAxisRaw("Vertical" + pNum);
         Vector2 dir = new Vector2(x , velocity.y);
         this.rb.velocity = dir;
+
+        if (x > 0)  // スティックを右に倒したら
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);   // 右向き
+        }
+        if (x < 0)  // スティックを左に倒したら
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);  // 左向き
+        }
     }
 
     //ジャンプ
     void Jump()
     {
-        Debug.Log("ｼﾞｬﾝﾌﾟ");
         Vector2 vel = rb.velocity;
 
         vel.y = jumpP;
@@ -83,17 +95,54 @@ public class PleyerController : MonoBehaviour
     //画面端ループ処理
     void FieldLoop()
     {
-        if(rb.transform.position.x>7.4)
+        if(rb.transform.position.x> widthRight)
         {
             Vector3 rbPos = rb.transform.position;
-            rbPos.x = rbPos.x - 15.5f;
+            rbPos.x = rbPos.x - loop;
             rb.transform.position = rbPos;
         }
-         else if (rb.transform.position.x < -7.4)
+         else if (rb.transform.position.x < widthLeft)
         {
             Vector3 rbPos = rb.transform.position;
-            rbPos.x = rbPos.x + 15.5f;
+            rbPos.x = rbPos.x + loop;
             rb.transform.position = rbPos;
         }
+    }
+
+    //コイン獲得
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log(pNum);
+        Debug.Log(cct);
+        if (col.gameObject.tag == "Item")
+        {
+            Debug.Log("get");
+            cct.coinCount += 1;
+            counter += 1;
+        }
+    }
+
+    //攻撃被弾
+    void OncollisionEnter2d(Collision2D other)
+    {
+        if(other.gameObject.tag =="Attackobj" )
+        {
+            LostCoin();
+        }
+    }
+
+    //コイン加算
+    public void GetCoin()
+    {
+        cct.coinCount += 1;
+        counter += 1;
+    }
+
+    //コイン減算
+   public void LostCoin()
+    {
+        Debug.Log("やられた！！");
+        cct.coinCount -= 1;
+        counter -= 1;
     }
 }

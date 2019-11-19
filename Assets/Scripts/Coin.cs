@@ -25,7 +25,7 @@ public class Coin : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag("Character"))
+        if(col.CompareTag("Player"))
         {
             sRenderer.enabled = false;
             coll.enabled = false;

@@ -16,6 +16,8 @@ public class PAttack : MonoBehaviour
     private int num; //プレイヤー番号取得
 
     GameObject _parent;
+    GameObject _parent2;
+    PleyerController pcon;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,9 @@ public class PAttack : MonoBehaviour
 
         _parent = transform.root.gameObject;
         num = _parent.GetComponent<PlayerNoSelect>().num;
+
+        _parent2 = transform.parent.gameObject;
+        pcon = _parent2.GetComponent<PleyerController>();
          
     }
 
@@ -71,11 +76,12 @@ public class PAttack : MonoBehaviour
     }
 
     
+    //攻撃が当たった時
     void OnCollisionEnter2D(Collision2D other)
     {
          if(other.gameObject.tag == "Player")
         {
-            
+            pcon.GetCoin();
         }
     }
 }

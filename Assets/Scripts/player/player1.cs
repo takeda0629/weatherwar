@@ -23,6 +23,7 @@ public class player1 : MonoBehaviour
     public CoinCountText cct;
     public int counter = 0;
 
+    public int loop;
     [SerializeField] PlayerNo playerNo;
     [SerializeField] float widthRight;
     [SerializeField] float widthLeft;
@@ -92,6 +93,7 @@ public class player1 : MonoBehaviour
     {
         if (col.gameObject.tag == "Item")
         {
+            Debug.Log("get");
             cct.coinCount += 1;
             counter += 1;
         }
@@ -102,14 +104,14 @@ public class player1 : MonoBehaviour
         if (rb.transform.position.x > widthRight)
         {
             Vector3 rbPos = rb.transform.position;
-            rbPos.x = rbPos.x - 15.5f;
+            rbPos.x = rbPos.x -17f;
             rb.transform.position = rbPos;
         }
 
         if (rb.transform.position.x < -widthLeft)
         {
             Vector3 rbPos = rb.transform.position;
-            rbPos.x = rbPos.x + 15.5f;
+            rbPos.x = rbPos.x + 17f;
             rb.transform.position = rbPos;
         }
     }
