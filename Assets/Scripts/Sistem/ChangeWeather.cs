@@ -27,6 +27,8 @@ public class ChangeWeather : MonoBehaviour
 
     public Weather weather; //初期値用
 
+    
+
 
     void Start()
     {
@@ -35,6 +37,8 @@ public class ChangeWeather : MonoBehaviour
         addSaving = 0;
 
         weather = Weather.sun;
+
+        
         
     }
 

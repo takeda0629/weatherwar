@@ -15,4 +15,24 @@ public class Status : MonoBehaviour
     {
         
     }
+
+    public void SunStatus()
+    {
+
+    }
+
+    public void RainStatus()
+    {
+
+    }
+
+    public void WindStatus()
+    {
+
+    }
+
+    public void SnowStatus()
+    {
+
+    }
 }

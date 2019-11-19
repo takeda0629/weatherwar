@@ -9,12 +9,12 @@ public class Rain : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sample = transform.GetChild(0).gameObject.GetComponent<player2>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        sample.Move();
+        
     }
 }
