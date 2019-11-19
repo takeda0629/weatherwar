@@ -18,10 +18,15 @@ public class PlayerNoSelect : MonoBehaviour
     public GameObject obj;
     GameObject character1;
 
+    int[] charaNos;  //キャラナンバーの配列
+    Status childStatus;
+
     // Start is called before the first frame update
     void Start()
     {
         num = (int)playerNo;
+        charaNos = Select.PlayerSelectChara();
+        GetChild();
     }
 
     // Update is called once per frame
@@ -41,4 +46,12 @@ public class PlayerNoSelect : MonoBehaviour
         return num;
     }
 
+    /// <summary>
+    /// 自分の選んだキャラを子オブジェクトとして取得
+    /// </summary>
+    void GetChild()
+    {
+        childStatus = transform.GetChild(0).gameObject.GetComponent<Status>();
+        
+    }
 }
