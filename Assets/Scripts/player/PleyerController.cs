@@ -27,6 +27,7 @@ public class PleyerController : MonoBehaviour
     //public int counter = 0;
 
     public float jumpP;
+    
 
 
     void Start()
@@ -42,6 +43,7 @@ public class PleyerController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        FieldLoop();
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -56,14 +58,15 @@ public class PleyerController : MonoBehaviour
     {
         Vector2 velocity = rb.velocity;
 
-        float x = Input.GetAxisRaw("Horizontal" + (int)playerNo)*speed;
-        //float x = Input.GetAxisRaw("Horizontal" + pNum)*speed   ;//キャラクターセレクト連動
+        //float x = Input.GetAxisRaw("Horizontal" + (int)playerNo)*speed;
+        float x = Input.GetAxisRaw("Horizontal" + pNum)*speed   ;//キャラクターセレクト連動
         //float y = Input.GetAxisRaw("Vertical" + (int)playerNo);
         //float y = Input.GetAxisRaw("Vertical" + pNum);
-        Vector2 dir = new Vector2(x, velocity.y);
+        Vector2 dir = new Vector2(x , velocity.y);
         this.rb.velocity = dir;
     }
 
+    //ジャンプ
     void Jump()
     {
         Debug.Log("ｼﾞｬﾝﾌﾟ");
@@ -73,34 +76,24 @@ public class PleyerController : MonoBehaviour
 
         //rb.AddForce(Vector2.up*jumpP);
 
-        rb.velocity = vel;
-        
-
-        
+        rb.velocity = vel;        
     }
 
-    void CharaSelect()
+ 
+    //画面端ループ処理
+    void FieldLoop()
     {
-        if (isSelectFlag == true)
+        if(rb.transform.position.x>7.4)
         {
-
+            Vector3 rbPos = rb.transform.position;
+            rbPos.x = rbPos.x - 15.5f;
+            rb.transform.position = rbPos;
+        }
+         else if (rb.transform.position.x < -7.4)
+        {
+            Vector3 rbPos = rb.transform.position;
+            rbPos.x = rbPos.x + 15.5f;
+            rb.transform.position = rbPos;
         }
     }
-
-    void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.CompareTag("Character"))
-        {
-            isSelectFlag = true;
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.CompareTag("Character"))
-        {
-            isSelectFlag = false;
-        }
-    }
-
 }
