@@ -21,6 +21,7 @@ public class PleyerController : MonoBehaviour
     [SerializeField] PlayerNo playerNo;
 
     public float jumpP;
+    
 
     void Start()
     {
