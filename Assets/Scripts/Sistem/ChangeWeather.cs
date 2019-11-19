@@ -27,11 +27,13 @@ public class ChangeWeather : MonoBehaviour
 
     public Weather weather; //初期値用
 
-    
+    public GameObject tim;
 
 
     void Start()
     {
+        //cMAX = tim.GetComponent<Timer>().totalTime / (int)Weather.Max;
+
         cMAX = GameObject.Find("Timer").gameObject.GetComponent<Timer>().totalTime / (int)Weather.Max;//enumの中身の数参照できるように改造予定。できないなら書き換え忘れないように注意
         cCounter = 0;
         addSaving = 0;
