@@ -24,6 +24,8 @@ public class player1 : MonoBehaviour
     public int counter = 0;
 
     [SerializeField] PlayerNo playerNo;
+    [SerializeField] float widthRight;
+    [SerializeField] float widthLeft;
 
     void Start()
     {
@@ -97,13 +99,13 @@ public class player1 : MonoBehaviour
 
     void FieldLoop()  // 画面端ループ処理
     {
-        if (rb.transform.position.x > 7.4)
+        if (rb.transform.position.x > widthRight)
         {
             Vector3 rbPos = rb.transform.position;
             rbPos.x = rbPos.x - 15.5f;
             rb.transform.position = rbPos;
         }
-        if (rb.transform.position.x < -7.4)
+        if (rb.transform.position.x < -widthLeft)
         {
             Vector3 rbPos = rb.transform.position;
             rbPos.x = rbPos.x + 15.5f;

@@ -380,7 +380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354801373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: 2.515, z: 0}
+  m_LocalPosition: {x: 1, y: 2, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -403,6 +403,8 @@ MonoBehaviour:
   cct: {fileID: 0}
   counter: 0
   playerNo: 1
+  widthRight: 7.4
+  widthLeft: 7.4
 --- !u!50 &354801377
 Rigidbody2D:
   serializedVersion: 4
@@ -834,7 +836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310.5, y: -41.3}
+  m_AnchoredPosition: {x: 400, y: -40}
   m_SizeDelta: {x: 160, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017774512
@@ -1865,22 +1867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2cfa30e62b4b048b54b58d8289f457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1211075425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1911,6 +1897,8 @@ MonoBehaviour:
   cct: {fileID: 0}
   counter: 0
   playerNo: 2
+  widthRight: 7.4
+  widthLeft: 7.4
 --- !u!61 &1211075427
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2014,7 +2002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211075423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: 2.515, z: 0}
+  m_LocalPosition: {x: -2, y: 2, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2035,12 +2023,12 @@ PrefabInstance:
     - target: {fileID: 5411534057848479434, guid: 1ae2462f370b674408efcadc78e179ef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -0.77
       objectReference: {fileID: 0}
     - target: {fileID: 5411534057848479434, guid: 1ae2462f370b674408efcadc78e179ef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 5411534057848479434, guid: 1ae2462f370b674408efcadc78e179ef,
         type: 3}
