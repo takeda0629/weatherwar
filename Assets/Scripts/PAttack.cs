@@ -32,7 +32,7 @@ public class PAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_parent);
+        //Debug.Log(_parent);
 
         if (nowattack)
         {
@@ -68,5 +68,14 @@ public class PAttack : MonoBehaviour
 
         nowattack = false;
         timecount = 0;
+    }
+
+    
+    void OnCollisionEnter2D(Collision2D other)
+    {
+         if(other.gameObject.tag == "Player")
+        {
+            
+        }
     }
 }
