@@ -7,7 +7,7 @@ TagManager:
   - Item
   - Floor
   - Character
-  - Attackobj
+  - Sun
   layers:
   - Default
   - TransparentFX

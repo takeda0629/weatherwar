@@ -5,17 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GamePlay : MonoBehaviour
 {
-    int[] charaNos;  //キャラナンバーの配列
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        charaNos = Select.PlayerSelectChara();
+        
 
-        foreach(var a in charaNos)
-        {
-            Debug.Log(a);
-        }
     }
 
     // Update is called once per frame
