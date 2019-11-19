@@ -24,4 +24,5 @@ public class CoinCountText : MonoBehaviour
     {
         coinCount += 1;
     }
+
 }
