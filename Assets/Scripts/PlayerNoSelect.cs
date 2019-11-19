@@ -18,6 +18,8 @@ public class PlayerNoSelect : MonoBehaviour
     public GameObject obj;
     GameObject character1;
 
+    ChangeWeather cWeather;
+
     int[] charaNos;  //キャラナンバーの配列
     Status childStatus;
 
@@ -25,8 +27,9 @@ public class PlayerNoSelect : MonoBehaviour
     void Start()
     {
         num = (int)playerNo;
+        cWeather = GameObject.Find("backG").GetComponent<ChangeWeather>();
         charaNos = Select.PlayerSelectChara();
-        GetChild();
+        //GetChild();
     }
 
     // Update is called once per frame
@@ -39,6 +42,7 @@ public class PlayerNoSelect : MonoBehaviour
             character1 = Instantiate(obj, this.transform.position,Quaternion.identity);
             character1.transform.parent = this.transform;
         }
+       
     }
 
     public int Renum()
@@ -54,4 +58,15 @@ public class PlayerNoSelect : MonoBehaviour
         childStatus = transform.GetChild(0).gameObject.GetComponent<Status>();
         
     }
+
+    //void test()
+    //{
+    //    int a = (int)cWeather.NowWeather();
+    //    int nowwether = a;
+        
+    //    if(nowwether != a)
+    //    {
+    //        childStatus.ChangeStatus(childStatus);
+    //    }
+    //}
 }

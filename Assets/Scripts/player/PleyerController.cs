@@ -35,8 +35,7 @@ public class PleyerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move();
-
+        
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Jump();
@@ -46,11 +45,13 @@ public class PleyerController : MonoBehaviour
     /// <summary>
     /// Player1の操作スクリプト
     /// </summary>
-    void Move()
+    /// <param name="magnification">天候の移動速度倍率</param>
+    public void Move(float magnification)
     {
+        
         Vector2 velocity = rb.velocity;
 
-        float x = Input.GetAxisRaw("Horizontal" + (int)playerNo)*speed;
+        float x = Input.GetAxisRaw("Horizontal" + (int)playerNo)*speed * magnification;
         //float x = Input.GetAxisRaw("Horizontal" + pNum)*speed   ;//キャラクターセレクト連動
         //float y = Input.GetAxisRaw("Vertical" + (int)playerNo);
         //float y = Input.GetAxisRaw("Vertical" + pNum);
