@@ -16,6 +16,7 @@ public class ChangeWeather : MonoBehaviour
         Max
     }
 
+
     public Sprite[] sprites;//背景画像用配列
 
     private bool chFlg = false;//フラグ管理
@@ -109,5 +110,10 @@ public class ChangeWeather : MonoBehaviour
 
 
 
+    }
+
+    public Weather NowWeather()
+    {
+        return weather;
     }
 }

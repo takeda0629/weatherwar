@@ -8,7 +8,7 @@ public class PleyerController : MonoBehaviour
     [SerializeField] float speed = 8.0f;
     private Rigidbody2D rb;
     public bool isSelectFlag = false;
-
+    
 
     void Start()
     {
