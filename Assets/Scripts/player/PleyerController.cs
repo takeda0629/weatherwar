@@ -26,10 +26,14 @@ public class PleyerController : MonoBehaviour
 
     public float jumpP;
 
+    //画面端ループ用関数
     [SerializeField] float widthRight;
     [SerializeField] float widthLeft;
 
     public float loop;
+
+    //ジャンプ回数制限用
+    public bool canJump;
 
 
     void Start()
@@ -41,6 +45,8 @@ public class PleyerController : MonoBehaviour
 
         cct = GameObject.Find(pNum + "PCount").GetComponent<CoinCountText>();
 
+        canJump = true;
+
     }
 
 
@@ -50,6 +56,7 @@ public class PleyerController : MonoBehaviour
         FieldLoop();
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetButtonDown("Jump" + pNum) && canJump)
         {
             Jump();
         }
@@ -89,19 +96,25 @@ public class PleyerController : MonoBehaviour
         //rb.AddForce(Vector2.up*jumpP);
 
         rb.velocity = vel;        
+        rb.velocity = vel;
+
+        canJump = false;
     }
 
  
+
     //画面端ループ処理
     void FieldLoop()
     {
         if(rb.transform.position.x> widthRight)
+        if (rb.transform.position.x > widthRight)
         {
             Vector3 rbPos = rb.transform.position;
             rbPos.x = rbPos.x - loop;
             rb.transform.position = rbPos;
         }
          else if (rb.transform.position.x < widthLeft)
+        else if (rb.transform.position.x < widthLeft)
         {
             Vector3 rbPos = rb.transform.position;
             rbPos.x = rbPos.x + loop;
@@ -124,12 +137,23 @@ public class PleyerController : MonoBehaviour
 
     //攻撃被弾
     void OncollisionEnter2d(Collision2D other)
+    //当たり判定処理
+    void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.tag =="Attackobj" )
+        if (other.gameObject.tag == "Attackobj")
         {
+            Debug.Log("被弾");
             LostCoin();
         }
+
+        //if (other.gameObject.tag == "Floor")
+        //{
+        //    Debug.Log("着地");
+        //    canJump = true;
+        //}
     }
+
 
     //コイン加算
     public void GetCoin()
@@ -140,6 +164,7 @@ public class PleyerController : MonoBehaviour
 
     //コイン減算
    public void LostCoin()
+    public void LostCoin()
     {
         Debug.Log("やられた！！");
         cct.coinCount -= 1;
