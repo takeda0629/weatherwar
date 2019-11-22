@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420618638826407270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.374, y: -0.1, z: 0}
+  m_LocalPosition: {x: 0.339, y: -0.103, z: 0}
   m_LocalScale: {x: 1.6215, y: 1.4558, z: 1}
   m_Children: []
   m_Father: {fileID: 1420618640594166949}
@@ -94,7 +94,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.039256454, y: 0.0010066032}
+  m_Offset: {x: 0.0005163923, y: 0.0010066032}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -105,7 +105,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.21435523, y: 0.13382936}
+  m_Size: {x: 0.13083161, y: 0.13382936}
   m_EdgeRadius: 0
 --- !u!114 &1420618638826407290
 MonoBehaviour:
@@ -153,6 +153,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1420618638826407289}
+  - {fileID: 8403496045812860962}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -216,15 +217,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb0cfb9c945f6fe42bc5fd3830bfbcee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 3
   isSelectFlag: 0
   playerNo: 1
   cct: {fileID: 0}
   counter: 0
-  jumpP: 8
+  jumpP: 7
   widthRight: 9.05
   widthLeft: -9.05
   loop: 18
+  canJump: 0
 --- !u!114 &1420618640594166948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +274,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012293339, y: 0.006146431}
+  m_Offset: {x: 0.01551795, y: -0.0019152164}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -283,5 +285,75 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5328553, y: 0.86477375}
+  m_Size: {x: 0.30068254, y: 0.75836134}
   m_EdgeRadius: 0
+--- !u!1 &8925646125403505290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8403496045812860962}
+  - component: {fileID: 4052914561301710199}
+  - component: {fileID: 3250525401452653052}
+  m_Layer: 0
+  m_Name: undercoll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8403496045812860962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925646125403505290}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1420618640594166949}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4052914561301710199
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925646125403505290}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.020171046, y: -0.35803634}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.27384233, y: 0.06204593}
+  m_EdgeRadius: 0
+--- !u!114 &3250525401452653052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925646125403505290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee40f3609c2073429cde9fd79ff25e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -19,6 +19,9 @@ public class PAttack : MonoBehaviour
     GameObject _parent2;
     PleyerController pcon;
 
+    //親のローカルスケール
+    Transform trans;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,7 @@ public class PAttack : MonoBehaviour
 
         _parent2 = transform.parent.gameObject;
         pcon = _parent2.GetComponent<PleyerController>();
+        trans = _parent2.GetComponent<Transform>();
          
     }
 
@@ -79,9 +83,14 @@ public class PAttack : MonoBehaviour
     //攻撃が当たった時
     void OnCollisionEnter2D(Collision2D other)
     {
+        float x = trans.localScale.x;
+
          if(other.gameObject.tag == "Player")
         {
             pcon.GetCoin();
+
+            Rigidbody2D rig = other.gameObject.GetComponent<Rigidbody2D>();
+            rig.AddForce(new Vector2(x * 10, 0), ForceMode2D.Impulse);
         }
     }
 }
