@@ -201,10 +201,10 @@ GameObject:
   - component: {fileID: 1420618640594166949}
   - component: {fileID: 1420618640594166946}
   - component: {fileID: 1420618640594166951}
+  - component: {fileID: 2979312195921740060}
   - component: {fileID: 1420618640594166948}
   - component: {fileID: 1420618640594166947}
   - component: {fileID: 1420618640594166950}
-  - component: {fileID: 2979312195921740060}
   m_Layer: 0
   m_Name: Csno
   m_TagString: Player
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb0cfb9c945f6fe42bc5fd3830bfbcee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 3
   isSelectFlag: 0
   playerNo: 1
   cct: {fileID: 0}
@@ -298,6 +298,19 @@ MonoBehaviour:
   widthLeft: -9.05
   loop: 18
   canJump: 0
+--- !u!114 &2979312195921740060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420618640594166944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5fa8a48c637dae4fa67f2c212a005f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnification: 0
 --- !u!114 &1420618640594166948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,16 +371,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.30068254, y: 0.75836134}
   m_EdgeRadius: 0
---- !u!114 &2979312195921740060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420618640594166944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5fa8a48c637dae4fa67f2c212a005f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magnification: 0
