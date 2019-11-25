@@ -106,14 +106,12 @@ public class PleyerController : MonoBehaviour
     //画面端ループ処理
     void FieldLoop()
     {
-        if(rb.transform.position.x> widthRight)
         if (rb.transform.position.x > widthRight)
         {
             Vector3 rbPos = rb.transform.position;
             rbPos.x = rbPos.x - loop;
             rb.transform.position = rbPos;
         }
-         else if (rb.transform.position.x < widthLeft)
         else if (rb.transform.position.x < widthLeft)
         {
             Vector3 rbPos = rb.transform.position;
@@ -135,8 +133,7 @@ public class PleyerController : MonoBehaviour
         }
     }
 
-    //攻撃被弾
-    void OncollisionEnter2d(Collision2D other)
+
     //当たり判定処理
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -163,7 +160,6 @@ public class PleyerController : MonoBehaviour
     }
 
     //コイン減算
-   public void LostCoin()
     public void LostCoin()
     {
         Debug.Log("やられた！！");
