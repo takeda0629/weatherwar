@@ -34,6 +34,9 @@ public class PleyerController : MonoBehaviour
     //ジャンプ回数制限用
     public bool canJump;
 
+    //天候に応じた係数
+    float mg;
+
 
     void Start()
     {
@@ -44,6 +47,7 @@ public class PleyerController : MonoBehaviour
 
         cct = GameObject.Find(pNum + "PCount").GetComponent<CoinCountText>();
 
+       
         canJump = true;
 
     }
@@ -51,7 +55,10 @@ public class PleyerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move();
+        mg = gameObject.GetComponent<Status>().magnification;
+        //Debug.Log("mg = " + mg);
+        //Move();
+        Move(mg);
         FieldLoop();
 
         if (Input.GetButtonDown("Jump" + pNum) && canJump)
@@ -63,12 +70,12 @@ public class PleyerController : MonoBehaviour
     /// <summary>
     /// Player1の操作スクリプト
     /// </summary>
-    void Move()
+    public void Move(float mg)
     {
         Vector2 velocity = rb.velocity;
 
         //float x = Input.GetAxisRaw("Horizontal" + (int)playerNo)*speed;
-        float x = Input.GetAxisRaw("Horizontal" + pNum) * speed;//キャラクターセレクト連動
+        float x = Input.GetAxisRaw("Horizontal" + pNum) * speed*mg;//キャラクターセレクト連動
         //float y = Input.GetAxisRaw("Vertical" + (int)playerNo);
         //float y = Input.GetAxisRaw("Vertical" + pNum);
         Vector2 dir = new Vector2(x, velocity.y);
