@@ -64,8 +64,9 @@ public class Status : MonoBehaviour
                     else magnification = 1.0f;
                     break;
                 }
-            case "Crai":
+            case "Crai(Clone)":
                 {
+                    Debug.Log("case Crai");
                     if (nowWeather == 1)
                     {
                         magnification = 1.2f;
@@ -77,8 +78,9 @@ public class Status : MonoBehaviour
                     else magnification = 1.0f;
                     break;
                 }
-            case "Cwin":
+            case "Cwin(Clone)":
                 {
+                    Debug.Log("case win");
                     if (nowWeather == 2)
                     {
                         magnification = 1.2f;
@@ -90,8 +92,9 @@ public class Status : MonoBehaviour
                     else magnification = 1.0f;
                     break;
                 }
-            case "Csno":
+            case "Csno(Clone)":
                 {
+                    Debug.Log("case Csno");
                     if (nowWeather == 3)
                     {
                         magnification = 1.2f;
