@@ -37,6 +37,7 @@ public class PleyerController : MonoBehaviour
     //天候に応じた係数
     float mg;
 
+    ChangeWeather weather;
 
     void Start()
     {
@@ -47,7 +48,7 @@ public class PleyerController : MonoBehaviour
 
         cct = GameObject.Find(pNum + "PCount").GetComponent<CoinCountText>();
 
-       
+
         canJump = true;
 
     }
@@ -126,8 +127,6 @@ public class PleyerController : MonoBehaviour
     //コイン獲得
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(pNum);
-        Debug.Log(cct);
         if (col.gameObject.tag == "Item")
         {
             Debug.Log("get");
@@ -163,6 +162,10 @@ public class PleyerController : MonoBehaviour
     //コイン減算
     public void LostCoin()
     {
+        if(cct.coinCount <= 0)
+        {
+            return;
+        }
         Debug.Log("やられた！！");
         cct.coinCount -= 1;
         counter -= 1;
