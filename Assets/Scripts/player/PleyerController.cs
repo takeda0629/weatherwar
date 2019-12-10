@@ -35,6 +35,10 @@ public class PleyerController : MonoBehaviour
     //ジャンプ回数制限用
     public bool canJump;
 
+    //天候に応じた係数
+    float mg;
+
+    ChangeWeather weather;
 
     void Start()
     {
@@ -44,6 +48,7 @@ public class PleyerController : MonoBehaviour
         pNum = _parent.GetComponent<PlayerNoSelect>().num;
 
         cct = GameObject.Find(pNum + "PCount").GetComponent<CoinCountText>();
+
 
         canJump = true;
 
@@ -162,6 +167,10 @@ public class PleyerController : MonoBehaviour
     //コイン減算
     public void LostCoin()
     {
+        if(cct.coinCount <= 0)
+        {
+            return;
+        }
         Debug.Log("やられた！！");
         cct.coinCount -= 1;
         counter -= 1;

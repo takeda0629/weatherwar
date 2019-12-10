@@ -47,7 +47,7 @@ public class ChangeWeather : MonoBehaviour
     //更新処理
     void Update()
     {
-        Debug.Log(cMAX+"秒");
+        //Debug.Log(cMAX+"秒");
         //cCounterのカウントアップ処理
         cCounter += Time.deltaTime;
         if(addSaving != 0)
@@ -119,7 +119,7 @@ public class ChangeWeather : MonoBehaviour
     }
 
     public Weather NowWeather()
-    {
+    {   
         return weather;
     }
 }
