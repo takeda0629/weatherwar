@@ -61,9 +61,8 @@ public class PleyerController : MonoBehaviour
         FieldLoop();
 
         //if (Input.GetKeyDown(KeyCode.UpArrow))
-        if (Input.GetButtonDown("Jump" + pNum) /*&& canJump*/)
+        if (Input.GetButtonDown("Jump" + pNum) && canJump)
         {
-                Debug.Log("aaaaaaaaaaaaaaaaaaaa");
             Jump();
         }
     }
@@ -102,6 +101,7 @@ public class PleyerController : MonoBehaviour
         //rb.AddForce(Vector2.up*jumpP);
 
         rb.velocity = vel;        
+        rb.velocity = vel;
 
         canJump = false;
     }
@@ -149,11 +149,11 @@ public class PleyerController : MonoBehaviour
             LostCoin();
         }
 
-        if (other.gameObject.tag == "Floor")
-        {
-            Debug.Log("着地");
-            canJump = true;
-        }
+        //if (other.gameObject.tag == "Floor")
+        //{
+        //    Debug.Log("着地");
+        //    canJump = true;
+        //}
     }
 
 

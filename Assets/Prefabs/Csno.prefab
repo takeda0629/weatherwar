@@ -205,7 +205,6 @@ GameObject:
   - component: {fileID: 1420618640594166947}
   - component: {fileID: 1420618640594166950}
   - component: {fileID: 9077789743430754235}
-  - component: {fileID: 7976561711158617212}
   m_Layer: 0
   m_Name: Csno
   m_TagString: Player
@@ -360,18 +359,6 @@ BoxCollider2D:
   m_Size: {x: 0.30068254, y: 0.75836134}
   m_EdgeRadius: 0
 --- !u!114 &9077789743430754235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420618640594166944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5fa8a48c637dae4fa67f2c212a005f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7976561711158617212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
