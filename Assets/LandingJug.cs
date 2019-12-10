@@ -26,10 +26,10 @@ public class LandingJug : MonoBehaviour
 
     }
 
-    //void OnCollisionStat2D(Collision2D other)
-    //{
-    //    Debug.Log(pcon.canJump);
-    //    pcon.canJump = true;
+    void OnCollisionExit2D(Collision2D other)
+    {
+        Debug.Log(pcon.canJump);
+        pcon.canJump = false;
 
-    //}
+    }
 }
