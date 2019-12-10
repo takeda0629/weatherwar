@@ -30,10 +30,11 @@ public class PlayerNoSelect : MonoBehaviour
     void Start()
     {
         num = (int)playerNo;
-        Debug.Log(num);
+        //Debug.Log(num);
         cWeather = GameObject.Find("backG").GetComponent<ChangeWeather>();
         charaNos = Select.PlayerSelectChara();
         
+
         //GetChild();
 
     }
@@ -46,7 +47,14 @@ public class PlayerNoSelect : MonoBehaviour
         {
             Vector3 vec3 = this.transform.position;//からオブジェクトの位置
 
-            character1 = Instantiate(obj[charaNos[num-1]-1], this.transform.position,Quaternion.identity);
+            if(charaNos == null)
+            {
+                for(int i= 0; i < 4; i++)
+                {
+                    charaNos[i] = i;
+                }
+            }
+            character1 = Instantiate(obj[charaNos[num - 1] - 1], this.transform.position, Quaternion.identity);
             character1.transform.parent = this.transform;
         }
        
