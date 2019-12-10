@@ -24,11 +24,13 @@ public class CharaSelect : MonoBehaviour
 
     [SerializeField]private bool decideFlag = false;
     private float beforeChoose;
+    [SerializeField]private GameObject okTEXT;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -48,11 +50,13 @@ public class CharaSelect : MonoBehaviour
         if(Input.GetButton("Decide" + (int)playerNo) )
         {
             decideFlag = true;
+            okTEXT.SetActive(true);
         }
 
         if(Input.GetButton("Cancel" + (int)playerNo))
         {
             decideFlag = false;
+            okTEXT.SetActive(false);
         }
     }
 

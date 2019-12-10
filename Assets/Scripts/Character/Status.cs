@@ -26,6 +26,7 @@ public class Status : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         nowWeather = (int)weather.NowWeather();
         
         if(nowWeather != beforeWeather) //天気が変わったら
