@@ -57,7 +57,7 @@ public class Status : MonoBehaviour
                     else magnification = 1.0f;
                     break;
                 }
-            case "Crai":
+            case "Crai(Clone)":
                 {
                     if (nowWeather == 1)
                     {
@@ -70,7 +70,7 @@ public class Status : MonoBehaviour
                     else magnification = 1.0f;
                     break;
                 }
-            case "Cwin":
+            case "Cwin(Clone)":
                 {
                     if (nowWeather == 2)
                     {
@@ -83,7 +83,7 @@ public class Status : MonoBehaviour
                     else magnification = 1.0f;
                     break;
                 }
-            case "Csno":
+            case "Csno(Clone)":
                 {
                     if (nowWeather == 3)
                     {
