@@ -55,11 +55,11 @@ public class Status : MonoBehaviour
                     Debug.Log("case Csun");
                     if (nowWeather == 0)
                     {
-                        magnification = 1.2f;
+                        magnification = 1.5f;
                     }
                     else if (nowWeather == 1)
                     {
-                        magnification = 0.8f;
+                        magnification = 0.7f;
                     }
                     else magnification = 1.0f;
                     break;
@@ -69,11 +69,11 @@ public class Status : MonoBehaviour
                     Debug.Log("case Crai");
                     if (nowWeather == 1)
                     {
-                        magnification = 1.2f;
+                        magnification = 1.5f;
                     }
                     else if (nowWeather == 2)
                     {
-                        magnification = 0.8f;
+                        magnification = 0.7f;
                     }
                     else magnification = 1.0f;
                     break;
@@ -83,11 +83,11 @@ public class Status : MonoBehaviour
                     Debug.Log("case win");
                     if (nowWeather == 2)
                     {
-                        magnification = 1.2f;
+                        magnification = 1.5f;
                     }
                     else if (nowWeather == 3)
                     {
-                        magnification = 0.8f;
+                        magnification = 0.7f;
                     }
                     else magnification = 1.0f;
                     break;
@@ -97,11 +97,11 @@ public class Status : MonoBehaviour
                     Debug.Log("case Csno");
                     if (nowWeather == 3)
                     {
-                        magnification = 1.2f;
+                        magnification = 1.5f;
                     }
                     else if (nowWeather == 0)
                     {
-                        magnification = 0.8f;
+                        magnification = 0.7f;
                     }
                     else magnification = 1.0f;
                     break;
