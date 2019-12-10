@@ -60,7 +60,7 @@ public class PleyerController : MonoBehaviour
         
         FieldLoop();
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        //if (Input.GetKeyDown(KeyCode.UpArrow))
         if (Input.GetButtonDown("Jump" + pNum) && canJump)
         {
             Jump();

@@ -20,7 +20,7 @@ public class LandingJug : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionStat2D(Collision2D other)
     {
             pcon.canJump = true;
 
