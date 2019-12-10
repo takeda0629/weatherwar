@@ -2061,6 +2061,7 @@ MonoBehaviour:
   widthRight: 0
   widthLeft: 0
   loop: 0
+  canJump: 0
 --- !u!212 &838396103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2782,6 +2783,7 @@ MonoBehaviour:
   widthRight: 0
   widthLeft: 0
   loop: 0
+  canJump: 0
 --- !u!212 &1185083907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2863,9 +2865,9 @@ MonoBehaviour:
   num: 0
   obj:
   - {fileID: 1420618640594166944, guid: efb516cd29404cd4193e5f2e3d0ee9cf, type: 3}
-  - {fileID: 2045164786819878222, guid: 63b68777130abd44b920db76708a29ad, type: 3}
-  - {fileID: 1420618640594166944, guid: efb516cd29404cd4193e5f2e3d0ee9cf, type: 3}
-  - {fileID: 1420618640594166944, guid: efb516cd29404cd4193e5f2e3d0ee9cf, type: 3}
+  - {fileID: 1420618640594166944, guid: 63b68777130abd44b920db76708a29ad, type: 3}
+  - {fileID: 1420618640594166944, guid: 3a1db92b0fd3ef04fa8decf014a7d88c, type: 3}
+  - {fileID: 1420618640594166944, guid: 022391e0369c9634b86c2f83b11b8408, type: 3}
 --- !u!4 &1191892532
 Transform:
   m_ObjectHideFlags: 0
@@ -3636,6 +3638,7 @@ MonoBehaviour:
   widthRight: 0
   widthLeft: 0
   loop: 0
+  canJump: 0
 --- !u!212 &1295366964
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3972,6 +3975,7 @@ MonoBehaviour:
   widthRight: 0
   widthLeft: 0
   loop: 0
+  canJump: 0
 --- !u!212 &1383476172
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5355,9 +5359,9 @@ MonoBehaviour:
   num: 0
   obj:
   - {fileID: 1420618640594166944, guid: efb516cd29404cd4193e5f2e3d0ee9cf, type: 3}
-  - {fileID: 2045164786819878222, guid: 63b68777130abd44b920db76708a29ad, type: 3}
-  - {fileID: 1420618640594166944, guid: efb516cd29404cd4193e5f2e3d0ee9cf, type: 3}
-  - {fileID: 1420618640594166944, guid: efb516cd29404cd4193e5f2e3d0ee9cf, type: 3}
+  - {fileID: 1420618640594166944, guid: 63b68777130abd44b920db76708a29ad, type: 3}
+  - {fileID: 1420618640594166944, guid: 3a1db92b0fd3ef04fa8decf014a7d88c, type: 3}
+  - {fileID: 1420618640594166944, guid: 022391e0369c9634b86c2f83b11b8408, type: 3}
 --- !u!4 &2005419228
 Transform:
   m_ObjectHideFlags: 0
