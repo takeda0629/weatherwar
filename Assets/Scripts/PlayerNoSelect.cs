@@ -12,10 +12,13 @@ public class PlayerNoSelect : MonoBehaviour
         p4 = 4
     }
 
+   
+
     [SerializeField] PlayerNo playerNo;
     public int num;
 
-    public GameObject obj;
+    public GameObject[] obj;
+    
     GameObject character1;
 
     ChangeWeather cWeather;
@@ -27,19 +30,23 @@ public class PlayerNoSelect : MonoBehaviour
     void Start()
     {
         num = (int)playerNo;
+        Debug.Log(num);
         cWeather = GameObject.Find("backG").GetComponent<ChangeWeather>();
         charaNos = Select.PlayerSelectChara();
+        
         //GetChild();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Vector3 vec3 = this.transform.position;//からオブジェクトの位置
 
-            character1 = Instantiate(obj, this.transform.position,Quaternion.identity);
+            character1 = Instantiate(obj[charaNos[num-1]-1], this.transform.position,Quaternion.identity);
             character1.transform.parent = this.transform;
         }
        

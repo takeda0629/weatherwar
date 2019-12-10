@@ -39,9 +39,10 @@ public class Select : MonoBehaviour
         bool P3 = p3Sel.IsDecided();
         bool P4 = p4Sel.IsDecided();
 
-        if(P1 == true &&  P2 == true && P3 == true && P4 == true)
+        if(P1 == true /*&&  P2 == true && P3 == true && P4 == true*/)
         {
-            SceneManager.LoadScene("GamePlayScene");
+            //SceneManager.LoadScene("GamePlayScene");
+            SceneManager.LoadScene("Sample_I_play");
         }
     }
 
@@ -57,6 +58,8 @@ public class Select : MonoBehaviour
         characters[1] = p2;
         characters[2] = p3;
         characters[3] = p4;
+
+        
 
         return characters;
 
