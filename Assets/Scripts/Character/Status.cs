@@ -44,7 +44,7 @@ public class Status : MonoBehaviour
     {
         switch(transform.name)
         {
-            case "Csun":
+            case "Csun(Clone)":
                 {
                     if (nowWeather == 0)
                     {
