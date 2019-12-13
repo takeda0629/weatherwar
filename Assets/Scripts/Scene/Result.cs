@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Result : MonoBehaviour
 {
+    private int[] chara_Nos;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        chara_Nos = Select.PlayerSelectChara();
     }
 
     // Update is called once per frame
