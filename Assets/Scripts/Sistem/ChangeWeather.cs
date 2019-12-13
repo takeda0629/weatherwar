@@ -39,9 +39,7 @@ public class ChangeWeather : MonoBehaviour
         addSaving = 0;
 
         weather = Weather.sun;
-
-        
-        
+  
     }
 
     //更新処理
