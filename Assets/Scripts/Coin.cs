@@ -37,6 +37,6 @@ public class Coin : MonoBehaviour
     {
         sRenderer.enabled = true;
         coll.enabled = true;
-        this.gameObject.transform.Translate(Random.Range(-3.0f, 3.0f), Random.Range(0.0f, 3.0f), 0);
+        //this.gameObject.transform.Translate(Random.Range(-3.0f, 3.0f), 0, 0);
     }
 }
