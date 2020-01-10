@@ -15,14 +15,7 @@ public class PowerColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            SpriteOn();
-        }
-        if(Input.GetKeyDown(KeyCode.B))
-        {
-            SpriteOff();
-        }
+
     }
 
     public void SpriteOn()
