@@ -81,12 +81,13 @@ public class PAttack : MonoBehaviour
 
     
     //攻撃が当たった時
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         float x = trans.localScale.x;
 
          if(other.gameObject.tag == "Player")
         {
+            Debug.Log("ヒット");
             pcon.GetCoin();
 
             PleyerController pc = other.gameObject.GetComponent<PleyerController>();
