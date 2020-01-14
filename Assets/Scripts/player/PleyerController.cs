@@ -38,6 +38,9 @@ public class PleyerController : MonoBehaviour
     //天候に応じた係数
     float mg;
 
+    //被弾フラグ
+    bool hitflag;
+
     ChangeWeather weather;
 
     void Start()
@@ -49,7 +52,7 @@ public class PleyerController : MonoBehaviour
 
         cct = GameObject.Find(pNum + "PCount").GetComponent<CoinCountText>();
 
-
+        hitflag = false;
         canJump = true;
 
     }
@@ -71,6 +74,11 @@ public class PleyerController : MonoBehaviour
     /// </summary>
     public void Move(float magnification)
     {
+        if(hitflag == true)
+        {
+            return;
+        }
+
         Vector2 velocity = rb.velocity;
 
         //float x = Input.GetAxisRaw("Horizontal" + (int)playerNo)*speed;
@@ -90,6 +98,22 @@ public class PleyerController : MonoBehaviour
         }
     }
 
+    public void Knockback(float x)
+    {
+        Debug.Log("ノックバック");
+        //float dirx = this.transform.localScale.x;
+        this.rb.AddForce(new Vector2(x * 5.5f, 0.5f), ForceMode2D.Impulse);
+
+        Invoke("Hitflagon", 0.5f);
+    }
+
+    //被弾の判定処理
+    void Hitflagon()
+    {
+        hitflag = false;
+
+    }
+
     //ジャンプ
     void Jump()
     {
@@ -104,7 +128,6 @@ public class PleyerController : MonoBehaviour
 
         canJump = false;
     }
-
 
 
     //画面端ループ処理
@@ -146,16 +169,12 @@ public class PleyerController : MonoBehaviour
     //当たり判定処理
     void OnCollisionEnter2D(Collision2D other)
     {
+        //敵の攻被弾
         if (other.gameObject.tag == "Attackobj")
         {
             Debug.Log("被弾");
             LostCoin();
-        }
-
-        if (other.gameObject.tag == "Floor")
-        {
-            Debug.Log("着地");
-            canJump = true;
+            
         }
     }
 
@@ -177,5 +196,6 @@ public class PleyerController : MonoBehaviour
         Debug.Log("やられた！！");
         cct.coinCount -= 1;
         counter -= 1;
+        hitflag = true;
     }
 }
