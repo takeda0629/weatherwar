@@ -47,6 +47,10 @@ public class PlayerNoSelect : MonoBehaviour
         {
             Vector3 vec3 = this.transform.position;//からオブジェクトの位置
 
+<<<<<<< HEAD
+            
+            character1 = Instantiate(obj[0/*charaNos[num - 1] - 1*/], this.transform.position, Quaternion.identity);
+=======
             //if(charaNos == null)
             //{
             //    for(int i= 0; i < 4; i++)
@@ -55,6 +59,7 @@ public class PlayerNoSelect : MonoBehaviour
             //    }
             //}
             character1 = Instantiate(obj[/*charaNos[num - 1] -*/ 0], this.transform.position, Quaternion.identity);
+>>>>>>> c73059933c9be4bee8965065b9cd54ccc7d229be
             character1.transform.parent = this.transform;
         }
        
