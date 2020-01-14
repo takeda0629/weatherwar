@@ -76,12 +76,6 @@ public class PleyerController : MonoBehaviour
     {
         if(hitflag == true)
         {
-            Debug.Log("ノックバック");
-            float dirx = this.transform.localScale.x;
-            this.rb.AddForce(new Vector2(-dirx * 0.5f, 0), ForceMode2D.Impulse);
-        
-            hitflag = false;
-
             return;
         }
 
@@ -102,6 +96,22 @@ public class PleyerController : MonoBehaviour
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);  // 左向き
         }
+    }
+
+    public void Knockback(float x)
+    {
+        Debug.Log("ノックバック");
+        //float dirx = this.transform.localScale.x;
+        this.rb.AddForce(new Vector2(x * 5.5f, 0.5f), ForceMode2D.Impulse);
+
+        Invoke("Hitflagon", 0.5f);
+    }
+
+    //被弾の判定処理
+    void Hitflagon()
+    {
+        hitflag = false;
+
     }
 
     //ジャンプ
@@ -165,12 +175,6 @@ public class PleyerController : MonoBehaviour
             Debug.Log("被弾");
             LostCoin();
             
-        }
-
-        //床と接触
-        if (other.gameObject.tag == "Floor")
-        {
-            canJump = true;
         }
     }
 
