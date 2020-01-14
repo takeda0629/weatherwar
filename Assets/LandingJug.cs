@@ -20,15 +20,15 @@ public class LandingJug : MonoBehaviour
         
     }
 
+    //接触したときpconのジャンプフラグをtrueに
     void OnCollisionEnter2D(Collision2D other)
     {
         pcon.canJump = true;
 
     }
-
+    //接触してないときpconのジャンプフラグをfalseに
     void OnCollisionExit2D(Collision2D other)
     {
-        Debug.Log(pcon.canJump);
         pcon.canJump = false;
 
     }
