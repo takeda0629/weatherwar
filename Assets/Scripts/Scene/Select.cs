@@ -12,6 +12,7 @@ public class Select : MonoBehaviour
     static CharaSelect p4Sel;
 
     
+
     public static int[] characters;
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class Select : MonoBehaviour
         p2Sel = GameObject.Find("P2Select").GetComponent<CharaSelect>();
         p3Sel = GameObject.Find("P3Select").GetComponent<CharaSelect>();
         p4Sel = GameObject.Find("P4Select").GetComponent<CharaSelect>();
+        
 
         characters = new int[4];
     }
@@ -39,7 +41,15 @@ public class Select : MonoBehaviour
         bool P3 = p3Sel.IsDecided();
         bool P4 = p4Sel.IsDecided();
 
-        if(P1 == true /*&&  P2 == true && P3 == true && P4 == true*/)
+        if (Input.GetButtonDown("LoadButton"))
+        {
+            P1 = p1Sel.LastResort();
+            P2 = p2Sel.LastResort();
+            P3 = p3Sel.LastResort();
+            P4 = p4Sel.LastResort();
+        }
+
+        if (P1 == true && P2 == true && P3 == true && P4 == true)
         {
             //SceneManager.LoadScene("GamePlayScene");
             SceneManager.LoadScene("Sample_I_play");
