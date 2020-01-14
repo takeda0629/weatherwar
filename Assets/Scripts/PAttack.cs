@@ -92,8 +92,8 @@ public class PAttack : MonoBehaviour
             PleyerController pc = other.gameObject.GetComponent<PleyerController>();
             pc.LostCoin();
 
-            Rigidbody2D rig = other.gameObject.GetComponent<Rigidbody2D>();
-            rig.AddForce(new Vector2(x * 10, 0), ForceMode2D.Impulse);
+            //Rigidbody2D rig = other.gameObject.GetComponent<Rigidbody2D>();
+            //rig.AddForce(new Vector2(x * 10, 0), ForceMode2D.Impulse);
         }
     }
 }
