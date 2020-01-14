@@ -21,7 +21,7 @@ public class RsultCoinText : MonoBehaviour
     void Start()
     {
         finCoin = GamePlay.FinishCoin();
-        coinText.text = (int)pNum + "Pのコイン："+ finCoin[(int)pNum - 1].ToString();
+        coinText.text = (int)pNum + "P："+ finCoin[(int)pNum - 1].ToString();
         
     }
 

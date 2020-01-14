@@ -122,4 +122,17 @@ public class CharaSelect : MonoBehaviour
     {
         return charaNo;
     }
+
+    /// <summary>
+    /// 間に合わなかったので最終手段
+    /// </summary>
+    /// <returns></returns>
+    public bool LastResort()
+    {
+        decideFlag = true;
+        return decideFlag;
+    }
+
+    
+   
 }
