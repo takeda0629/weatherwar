@@ -130,7 +130,7 @@ public class PleyerController : MonoBehaviour
         //通常コイン
         if (col.gameObject.tag == "Item")
         {
-            cct.coinCount += 1;
+            cct.AddCount();
             counter += 1;
         }
         //大コイン
@@ -163,7 +163,7 @@ public class PleyerController : MonoBehaviour
     //コイン加算
     public void GetCoin()
     {
-        cct.coinCount += 1;
+        cct.AddCount();
         counter += 1;
     }
 
