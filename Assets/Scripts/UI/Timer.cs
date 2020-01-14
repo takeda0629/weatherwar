@@ -48,7 +48,7 @@ public class Timer : MonoBehaviour
 
     void CountDown()
     {
-        if (totalTime <= 0f)
+        if (totalTime < 0f)
         {
             return;
         }
@@ -68,5 +68,14 @@ public class Timer : MonoBehaviour
         //{
 
         //}
+    }
+
+    /// <summary>
+    /// 残り時間
+    /// </summary>
+    /// <returns></returns>
+    public float TimeRemaining()
+    {
+        return totalTime;
     }
 }

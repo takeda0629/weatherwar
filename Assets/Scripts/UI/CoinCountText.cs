@@ -7,7 +7,7 @@ public class CoinCountText : MonoBehaviour
 {
     public Text countText;
     public int coinCount = 0;
-
+    private  int finCoin = 0;
 
     void Start()
     {
@@ -20,9 +20,15 @@ public class CoinCountText : MonoBehaviour
         countText.text = coinCount.ToString();
     }
 
-    public void AddCount(GameObject players)
+    public void AddCount()
     {
         coinCount += 1;
+        finCoin += 1;
+    }
+
+    public  int CoinCount()
+    {
+        return finCoin;
     }
 
 }
