@@ -33,7 +33,8 @@ public class PlayerNoSelect : MonoBehaviour
         //Debug.Log(num);
         cWeather = GameObject.Find("backG").GetComponent<ChangeWeather>();
         charaNos = Select.PlayerSelectChara();
-        
+        character1 = Instantiate(obj[charaNos[num - 1] - 1], this.transform.position, Quaternion.identity);
+        character1.transform.parent = this.transform;
 
         //GetChild();
 
@@ -54,8 +55,7 @@ public class PlayerNoSelect : MonoBehaviour
                     charaNos[i] = i;
                 }
             }
-            character1 = Instantiate(obj[charaNos[num - 1] - 1], this.transform.position, Quaternion.identity);
-            character1.transform.parent = this.transform;
+           
         }
        
     }

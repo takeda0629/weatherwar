@@ -6,6 +6,14 @@ using UnityEngine.UI;
 
 public class ResultChara : MonoBehaviour
 {
+    public enum PlayerNo
+    {
+        p1 = 1,
+        p2 = 2,
+        p3 = 3,
+        p4 = 4,
+    }
+    [SerializeField] PlayerNo playerNo;
     private int[] chara_Nos;
     [SerializeField] private Sprite[] gameChara;
 
@@ -16,7 +24,7 @@ public class ResultChara : MonoBehaviour
     void Start()
     {
         chara_Nos = Select.PlayerSelectChara();
-        sprite = gameChara[chara_Nos[0] - 1];
+        sprite = gameChara[chara_Nos[(int)playerNo - 1] - 1];
         image = this.GetComponent<Image>();
         image.sprite = sprite;
     }
