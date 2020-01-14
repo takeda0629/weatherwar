@@ -128,13 +128,18 @@ public class PleyerController : MonoBehaviour
     //コイン獲得
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(pNum);
-        Debug.Log(cct);
+        //通常コイン
         if (col.gameObject.tag == "Item")
         {
-            Debug.Log("get");
             cct.coinCount += 1;
             counter += 1;
+        }
+        //大コイン
+        if(col.gameObject.tag == "Item2")
+        {
+            Debug.Log("get");
+            cct.coinCount += 10;
+            counter += 10;
         }
     }
 
