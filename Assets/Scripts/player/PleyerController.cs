@@ -57,7 +57,7 @@ public class PleyerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+
         FieldLoop();
         //if (Input.GetKeyDown(KeyCode.UpArrow))
         if (Input.GetButtonDown("Jump" + pNum)/* && canJump*/)
@@ -74,10 +74,10 @@ public class PleyerController : MonoBehaviour
         Vector2 velocity = rb.velocity;
 
         //float x = Input.GetAxisRaw("Horizontal" + (int)playerNo)*speed;
-        float x = Input.GetAxisRaw("Horizontal" + pNum)*speed  * magnification ;//キャラクターセレクト連動
+        float x = Input.GetAxisRaw("Horizontal" + pNum) * speed * magnification;//キャラクターセレクト連動
         //float y = Input.GetAxisRaw("Vertical" + (int)playerNo);
         //float y = Input.GetAxisRaw("Vertical" + pNum);
-        Vector2 dir = new Vector2(x , velocity.y);
+        Vector2 dir = new Vector2(x, velocity.y);
         this.rb.velocity = dir;
 
         if (x > 0)  // スティックを右に倒したら
@@ -99,13 +99,13 @@ public class PleyerController : MonoBehaviour
 
         //rb.AddForce(Vector2.up*jumpP);
 
-        rb.velocity = vel;        
+        rb.velocity = vel;
         rb.velocity = vel;
 
         canJump = false;
     }
 
- 
+
 
     //画面端ループ処理
     void FieldLoop()
@@ -134,7 +134,7 @@ public class PleyerController : MonoBehaviour
             counter += 1;
         }
         //大コイン
-        if(col.gameObject.tag == "Item2")
+        if (col.gameObject.tag == "Item2")
         {
             Debug.Log("get");
             cct.coinCount += 10;
@@ -146,18 +146,17 @@ public class PleyerController : MonoBehaviour
     //当たり判定処理
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag =="Attackobj" )
         if (other.gameObject.tag == "Attackobj")
         {
             Debug.Log("被弾");
             LostCoin();
         }
 
-        //if (other.gameObject.tag == "Floor")
-        //{
-        //    Debug.Log("着地");
-        //    canJump = true;
-        //}
+        if (other.gameObject.tag == "Floor")
+        {
+            Debug.Log("着地");
+            canJump = true;
+        }
     }
 
 
@@ -171,7 +170,7 @@ public class PleyerController : MonoBehaviour
     //コイン減算
     public void LostCoin()
     {
-        if(cct.coinCount <= 0)
+        if (cct.coinCount <= 0)
         {
             return;
         }
