@@ -51,6 +51,11 @@ public class PleyerController : MonoBehaviour
         pNum = _parent.GetComponent<PlayerNoSelect>().num;
 
         cct = GameObject.Find(pNum + "PCount").GetComponent<CoinCountText>();
+        weather = GameObject.Find("backG").GetComponent<ChangeWeather>();
+        if(weather == null)
+        {
+            Debug.Log("weather is null!!");
+        }
 
         hitflag = false;
         canJump = true;
@@ -155,6 +160,7 @@ public class PleyerController : MonoBehaviour
         {
             cct.AddCount();
             counter += 1;
+            weather.addSaving += 5f;
         }
         //大コイン
         if (col.gameObject.tag == "Item2")
@@ -182,8 +188,10 @@ public class PleyerController : MonoBehaviour
     //コイン加算
     public void GetCoin()
     {
+        weather.addSaving += 0.5f;
         cct.AddCount();
         counter += 1;
+
     }
 
     //コイン減算
