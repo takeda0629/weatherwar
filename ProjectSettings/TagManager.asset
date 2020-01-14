@@ -8,6 +8,8 @@ TagManager:
   - Floor
   - Character
   - Sun
+  - Attackobj
+  - Item2
   layers:
   - Default
   - TransparentFX
