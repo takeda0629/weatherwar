@@ -7,6 +7,9 @@ public class BigCoin : MonoBehaviour
     SpriteRenderer sRenderer;
     CircleCollider2D coll;
     private Camera _mainCamera;
+
+    [SerializeField]
+    float emg;
     float Minx;
     float Maxx;
     float Miny;
@@ -36,7 +39,7 @@ public class BigCoin : MonoBehaviour
 
     void Update()
     {
-        Invoke("OnEnabled", 63.5f);
+        Invoke("OnEnabled", emg);
     }
 
     void OnEnabled()
