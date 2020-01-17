@@ -65,4 +65,9 @@ public class BigCoin : MonoBehaviour
         bottomRight.Scale(new Vector3(1f, -1f, 1f));
         return bottomRight;
     }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Destroy(gameObject);
+    }
 }
