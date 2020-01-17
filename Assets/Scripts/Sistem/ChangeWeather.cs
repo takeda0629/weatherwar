@@ -22,7 +22,7 @@ public class ChangeWeather : MonoBehaviour
     private bool chFlg = false;//フラグ管理
 
     float cMAX; //カウンター上限値--->タイマーから数字引っ張ってくる奴
-    private float cCounter; //天候変更用カウンター
+    public float cCounter; //天候変更用カウンター
     public float addSaving; //外部からのカウンター干渉用
 
     public Weather weather; //初期値用
@@ -45,7 +45,7 @@ public class ChangeWeather : MonoBehaviour
     //更新処理
     void Update()
     {
-        //Debug.Log(cMAX+"秒");
+        Debug.Log(addSaving);
         //cCounterのカウントアップ処理
         cCounter += Time.deltaTime;
         if(addSaving != 0)
