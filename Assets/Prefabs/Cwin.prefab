@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 1420618640594166947}
   - component: {fileID: 1420618640594166950}
   - component: {fileID: 6202148749658569154}
+  - component: {fileID: 2640416828444725615}
   m_Layer: 0
   m_Name: Cwin
   m_TagString: Player
@@ -294,11 +295,12 @@ MonoBehaviour:
   playerNo: 1
   cct: {fileID: 0}
   counter: 0
-  jumpP: 8
+  jumpP: 7
   widthRight: 9.05
   widthLeft: -9.05
   loop: 18
   canJump: 0
+  charStatus: {fileID: 0}
 --- !u!114 &1420618640594166948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,11 +368,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420618640594166944}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5fa8a48c637dae4fa67f2c212a005f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeSE: {fileID: 0}
+--- !u!114 &2640416828444725615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420618640594166944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3af3690305c2e418acad56526277f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeSE: {fileID: 0}
 --- !u!1 &8989704457072117227
 GameObject:
   m_ObjectHideFlags: 0

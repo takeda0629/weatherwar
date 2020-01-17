@@ -29,7 +29,7 @@ public class Status : MonoBehaviour
 
         //powersprite = transform.GetChild(2).GetComponent<GameObject>();
 
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -41,8 +41,8 @@ public class Status : MonoBehaviour
         if (nowWeather != beforeWeather) //天気が変わったら
         {
             ChangeStatus();
-            audioSource.clip = changeSE;
-            audioSource.Play();
+            //audioSource.clip = changeSE;
+            //audioSource.Play();
         }
         pCon.Move(magnification);
         beforeWeather = nowWeather;
@@ -60,17 +60,17 @@ public class Status : MonoBehaviour
                 {
                     if (nowWeather == 0)
                     {
-                        magnification = 1.2f;
+                        magnification = 1.1f;
                         powerColor.SpriteOn();
                     }
                     else if (nowWeather == 1)
                     {
-                        magnification = 0.8f;
+                       
                         powerColor.SpriteOff();
                     }
                     else
                     {
-                        magnification = 1.0f;
+                        magnification = 0.9f;
                         powerColor.SpriteOff();
                     }
                     break;
@@ -79,12 +79,12 @@ public class Status : MonoBehaviour
                 {
                     if (nowWeather == 1)
                     {
-                        magnification = 1.2f;
+                       
                         powerColor.SpriteOn();
                     }
                     else if (nowWeather == 2)
                     {
-                        magnification = 0.8f;
+                        
                         powerColor.SpriteOff();
                     }
                     else
@@ -98,12 +98,12 @@ public class Status : MonoBehaviour
                 {
                     if (nowWeather == 2)
                     {
-                        magnification = 1.2f;
+                        magnification = 1.5f;
                         powerColor.SpriteOn();
                     }
                     else if (nowWeather == 3)
                     {
-                        magnification = 0.8f;
+                        magnification = 0.6f;
                         powerColor.SpriteOff();
                     }
                     else
