@@ -44,10 +44,12 @@ public class PleyerController : MonoBehaviour
     ChangeWeather weather;
 
     // SE関係
-    AudioSource audioSource;
-    public AudioClip jumpSE;
-    public AudioClip coinSE;
-    public AudioClip damageSE;
+    //AudioSource audioSource;
+    //public AudioClip jumpSE;
+    //public AudioClip coinSE;
+    //public AudioClip damageSE;
+
+    [SerializeField] Object charStatus;
 
     void Start()
     {
@@ -57,16 +59,11 @@ public class PleyerController : MonoBehaviour
         pNum = _parent.GetComponent<PlayerNoSelect>().num;
 
         cct = GameObject.Find(pNum + "PCount").GetComponent<CoinCountText>();
-        weather = GameObject.Find("backG").GetComponent<ChangeWeather>();
-        if(weather == null)
-        {
-            Debug.Log("weather is null!!");
-        }
 
         hitflag = false;
         canJump = true;
 
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -140,8 +137,8 @@ public class PleyerController : MonoBehaviour
 
         canJump = false;
 
-        audioSource.clip = jumpSE;
-        audioSource.Play();
+        //audioSource.clip = jumpSE;
+        //audioSource.Play();
     }
 
 
@@ -170,9 +167,8 @@ public class PleyerController : MonoBehaviour
         {
             cct.AddCount();
             counter += 1;
-            audioSource.clip = coinSE;
-            audioSource.Play();
-            weather.addSaving += 0.5f;
+            //audioSource.clip = coinSE;
+            //audioSource.Play();
         }
         //大コイン
         if (col.gameObject.tag == "Item2")
@@ -180,8 +176,8 @@ public class PleyerController : MonoBehaviour
             Debug.Log("get");
             cct.coinCount += 10;
             counter += 10;
-            audioSource.clip = coinSE;
-            audioSource.Play();
+            //audioSource.clip = coinSE;
+            //audioSource.Play();
         }
     }
 
@@ -202,10 +198,8 @@ public class PleyerController : MonoBehaviour
     //コイン加算
     public void GetCoin()
     {
-        
         cct.AddCount();
         counter += 1;
-
     }
 
     //コイン減算

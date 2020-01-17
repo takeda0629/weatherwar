@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rain : MonoBehaviour
 {
-    player2 sample;
+    
 
     // Start is called before the first frame update
     void Start()
