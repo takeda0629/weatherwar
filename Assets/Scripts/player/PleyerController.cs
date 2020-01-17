@@ -172,7 +172,7 @@ public class PleyerController : MonoBehaviour
             counter += 1;
             audioSource.clip = coinSE;
             audioSource.Play();
-            weather.addSaving += 5f;
+            weather.addSaving += 0.5f;
         }
         //大コイン
         if (col.gameObject.tag == "Item2")
@@ -202,7 +202,7 @@ public class PleyerController : MonoBehaviour
     //コイン加算
     public void GetCoin()
     {
-        weather.addSaving += 0.5f;
+        
         cct.AddCount();
         counter += 1;
 
