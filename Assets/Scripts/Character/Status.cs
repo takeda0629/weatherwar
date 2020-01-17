@@ -13,6 +13,8 @@ public class Status : MonoBehaviour
 
     PowerColor powerColor;
 
+    AudioSource audioSource;
+    public AudioClip changeSE;
 
 
     // Start is called before the first frame update
@@ -26,8 +28,8 @@ public class Status : MonoBehaviour
         ChangeStatus();
 
         //powersprite = transform.GetChild(2).GetComponent<GameObject>();
- 
-       
+
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -39,6 +41,8 @@ public class Status : MonoBehaviour
         if (nowWeather != beforeWeather) //天気が変わったら
         {
             ChangeStatus();
+            audioSource.clip = changeSE;
+            audioSource.Play();
         }
         pCon.Move(magnification);
         beforeWeather = nowWeather;

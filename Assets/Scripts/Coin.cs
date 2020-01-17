@@ -9,6 +9,7 @@ public class Coin : MonoBehaviour
     public GameObject coinPrefab;
     private Camera _mainCamera;
 
+
     float Minx;
     float Maxx;
     float Miny;
@@ -36,6 +37,8 @@ public class Coin : MonoBehaviour
         Maxx = getScreenBottomRight().x;
         Maxy = getScreenTopLeft().y-1f;
         Miny = getScreenBottomRight().y;
+
+
 
         //time = 0;
         sRenderer = GetComponent<SpriteRenderer>();
