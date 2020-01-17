@@ -3,7 +3,11 @@ guid: fb0cfb9c945f6fe42bc5fd3830bfbcee
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cct: {instanceID: 0}
+  - jumpSE: {fileID: 8300000, guid: 258fd1fa6fa45ed46bf55a5e690110c4, type: 3}
+  - coinSE: {fileID: 8300000, guid: c53bf3c0ba648dc4ab7f0ad8592f2efc, type: 3}
+  - damageSE: {fileID: 8300000, guid: 35bf222a6952ec043a460f27b2a723d0, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
