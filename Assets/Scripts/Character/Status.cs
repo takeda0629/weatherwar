@@ -41,8 +41,8 @@ public class Status : MonoBehaviour
         if (nowWeather != beforeWeather) //天気が変わったら
         {
             ChangeStatus();
-            audioSource.clip = changeSE;
-            audioSource.Play();
+            //audioSource.clip = changeSE;
+            //audioSource.Play();
         }
         pCon.Move(magnification);
         beforeWeather = nowWeather;
