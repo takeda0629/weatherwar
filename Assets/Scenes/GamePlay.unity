@@ -3708,10 +3708,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
+<<<<<<< HEAD
   - {fileID: 21300000, guid: 6bdab3145c228c74a87e7a6493ab4ce8, type: 3}
   - {fileID: 21300000, guid: 00ea4305f5bfdd148a648bd7d85578a3, type: 3}
   - {fileID: 21300000, guid: c1ee882d1934a1046a2d923fd6dd8116, type: 3}
   - {fileID: 21300000, guid: b547c0701a9bd8a4493987b9b57f71b8, type: 3}
+=======
+  - {fileID: 21300000, guid: dcd01ce0013dfd540bf4251256bf5482, type: 3}
+  - {fileID: 21300000, guid: dc8cf735ffaad354999748156cb1fb8b, type: 3}
+  - {fileID: 21300000, guid: ca755a7a4e47ec14aad0bd4d6467a2d5, type: 3}
+  - {fileID: 21300000, guid: 8bab9d9871295ae42baefc7da4fc955d, type: 3}
+>>>>>>> 2504e85c5c24683cee46686f1a5602591898f8d1
   cCounter: 0
   addSaving: 0
   weather: 0
@@ -3753,7 +3760,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6bdab3145c228c74a87e7a6493ab4ce8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dcd01ce0013dfd540bf4251256bf5482, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
