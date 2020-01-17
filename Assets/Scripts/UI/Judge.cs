@@ -62,6 +62,10 @@ public class Judge : MonoBehaviour
         {
             wineerText.text = "Player4の勝ち!!";
         }
+        else
+        {
+            wineerText.text = "1位が誰だっていいじゃないか。人間だもの。\n ウェザ男";
+        }
 
         once = false;
         
