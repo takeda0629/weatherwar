@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PowerColor : MonoBehaviour
 {
-    SpriteRenderer renderer;
+    new SpriteRenderer renderer;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         renderer = GetComponent<SpriteRenderer>();
     }
@@ -20,13 +20,12 @@ public class PowerColor : MonoBehaviour
 
     public void SpriteOn()
     {
-        Debug.Log("つよい");
         renderer.enabled = true;
     }
 
     public void SpriteOff()
     {
-        Debug.Log("ふつー");
+        //Debug.Log("ふつー");
         renderer.enabled = false;
     }
 }

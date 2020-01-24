@@ -39,7 +39,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36480694071021821}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -223,11 +223,11 @@ GameObject:
   - component: {fileID: 1420618640594166949}
   - component: {fileID: 1420618640594166946}
   - component: {fileID: 1420618640594166951}
-  - component: {fileID: 4476754546150569319}
   - component: {fileID: 1420618640594166948}
   - component: {fileID: 1420618640594166947}
   - component: {fileID: 1420618640594166950}
-  - component: {fileID: 6537495989781203393}
+  - component: {fileID: 8800535030304168171}
+  - component: {fileID: 7004355028310711142}
   m_Layer: 0
   m_Name: Csun
   m_TagString: Player
@@ -312,12 +312,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb0cfb9c945f6fe42bc5fd3830bfbcee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 8
   isSelectFlag: 0
   playerNo: 1
   cct: {fileID: 0}
   counter: 0
-  jumpP: 7
+  jumpP: 8
   widthRight: 9.05
   widthLeft: -9.05
   loop: 18
@@ -325,19 +325,7 @@ MonoBehaviour:
   jumpSE: {fileID: 8300000, guid: 258fd1fa6fa45ed46bf55a5e690110c4, type: 3}
   coinSE: {fileID: 8300000, guid: c53bf3c0ba648dc4ab7f0ad8592f2efc, type: 3}
   damageSE: {fileID: 8300000, guid: 35bf222a6952ec043a460f27b2a723d0, type: 3}
---- !u!114 &4476754546150569319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420618640594166944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5fa8a48c637dae4fa67f2c212a005f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changeSE: {fileID: 0}
+  charStatus: {fileID: 0}
 --- !u!114 &1420618640594166948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,7 +386,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.30068254, y: 0.75836134}
   m_EdgeRadius: 0
---- !u!82 &6537495989781203393
+--- !u!114 &8800535030304168171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420618640594166944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76332de6840ded844a5aacd1e4fd12c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeSE: {fileID: 0}
+--- !u!82 &7004355028310711142
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

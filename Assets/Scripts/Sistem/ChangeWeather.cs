@@ -45,7 +45,7 @@ public class ChangeWeather : MonoBehaviour
     //更新処理
     void Update()
     {
-        Debug.Log(addSaving);
+        //Debug.Log(addSaving);
         //cCounterのカウントアップ処理
         cCounter += Time.deltaTime;
         if(addSaving != 0)

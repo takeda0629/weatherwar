@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//晴れが得意なキャラ：攻撃力が高いが足が遅い
-public class Sun : Status
+//風が得意なキャラ：足が速い
+ public class Wind : Status
 {
-    
+   
 
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
         ChangeStatus();
-        
     }
 
     // Update is called once per frame
@@ -34,31 +33,28 @@ public class Sun : Status
         //}
         //pCon.Move(magnification);
         //beforeWeather = nowWeather;
-
-
     }
+
     public override void ChangeStatus()
     {
         powerColor = transform.GetChild(2).gameObject.GetComponent<PowerColor>();
-        if (nowWeather == 0)
+        if (nowWeather == 2)
         {
             jumpP = 1.0f;
-            magnification = 1.1f;
+            magnification = 1.5f;
             powerColor.SpriteOn();
         }
-        else if (nowWeather == 1)
+        else if (nowWeather == 3)
         {
             jumpP = 1.0f;
-            magnification = 0.9f;
+            magnification = 0.6f;
             powerColor.SpriteOff();
         }
         else
         {
             jumpP = 1.0f;
-            magnification = 0.9f;
+            magnification = 1.0f;
             powerColor.SpriteOff();
         }
     }
-
-    
 }

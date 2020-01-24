@@ -27,9 +27,9 @@ public class LandingJug : MonoBehaviour
 
     }
     //接触してないときpconのジャンプフラグをfalseに
-    void OnCollisionExit2D(Collision2D other)
-    {
-        pcon.canJump = false;
+    //void OnCollisionExit2D(Collision2D other)
+    //{
+    //    pcon.canJump = false;
 
-    }
+    //}
 }

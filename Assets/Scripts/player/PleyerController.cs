@@ -49,6 +49,8 @@ public class PleyerController : MonoBehaviour
     public AudioClip coinSE;
     public AudioClip damageSE;
 
+    [SerializeField] Object charStatus;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,11 +60,6 @@ public class PleyerController : MonoBehaviour
 
         cct = GameObject.Find(pNum + "PCount").GetComponent<CoinCountText>();
         weather = GameObject.Find("backG").GetComponent<ChangeWeather>();
-        if(weather == null)
-        {
-            Debug.Log("weather is null!!");
-        }
-
         hitflag = false;
         canJump = true;
 
@@ -77,7 +74,7 @@ public class PleyerController : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.UpArrow))
         if (Input.GetButtonDown("Jump" + pNum) && canJump)
         {
-            Jump();
+            //Jump();
         }
     }
 
@@ -127,11 +124,11 @@ public class PleyerController : MonoBehaviour
     }
 
     //ジャンプ
-    void Jump()
+    public void Jump(float jumpMg)
     {
         Vector2 vel = rb.velocity;
 
-        vel.y = jumpP;
+        vel.y = jumpP * jumpMg;
 
         //rb.AddForce(Vector2.up*jumpP);
 
@@ -170,9 +167,9 @@ public class PleyerController : MonoBehaviour
         {
             cct.AddCount();
             counter += 1;
+            weather.addSaving += 0.05f;
             audioSource.clip = coinSE;
             audioSource.Play();
-            weather.addSaving += 5f;
         }
         //大コイン
         if (col.gameObject.tag == "Item2")
@@ -202,10 +199,8 @@ public class PleyerController : MonoBehaviour
     //コイン加算
     public void GetCoin()
     {
-        weather.addSaving += 0.5f;
         cct.AddCount();
         counter += 1;
-
     }
 
     //コイン減算
@@ -219,5 +214,10 @@ public class PleyerController : MonoBehaviour
         cct.coinCount -= 1;
         counter -= 1;
         hitflag = true;
+    }
+
+    public bool CanJump()
+    {
+        return canJump;
     }
 }

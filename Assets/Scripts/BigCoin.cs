@@ -22,8 +22,8 @@ public class BigCoin : MonoBehaviour
         _mainCamera = obj.GetComponent<Camera>();
 
         // 座標値を出力
-        Debug.Log(getScreenTopLeft().x + ", " + getScreenTopLeft().y);
-        Debug.Log(getScreenBottomRight().x + ", " + getScreenBottomRight().y);
+        //Debug.Log(getScreenTopLeft().x + ", " + getScreenTopLeft().y);
+        //Debug.Log(getScreenBottomRight().x + ", " + getScreenBottomRight().y);
 
         Minx = getScreenTopLeft().x;
         Maxx = getScreenBottomRight().x;
