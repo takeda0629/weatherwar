@@ -11,7 +11,6 @@ using UnityEngine;
     public override void Start()
     {
         base.Start();
-        ChangeStatus();
     }
 
     // Update is called once per frame
@@ -35,6 +34,7 @@ using UnityEngine;
         //beforeWeather = nowWeather;
     }
 
+   
     public override void ChangeStatus()
     {
         powerColor = transform.GetChild(2).gameObject.GetComponent<PowerColor>();

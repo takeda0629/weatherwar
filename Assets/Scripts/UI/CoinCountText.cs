@@ -20,10 +20,21 @@ public class CoinCountText : MonoBehaviour
         countText.text = coinCount.ToString();
     }
 
-    public void AddCount()
+    public void AddCount(int coin)
     {
-        coinCount += 1;
-        finCoin += 1;
+        coinCount += coin;
+        finCoin += coin;
+    }
+
+    public void LostCount(int coin)
+    {
+        coinCount -= coin;
+        finCoin -= coin;
+    }
+
+    public int NowCoin()
+    {
+        return coinCount;
     }
 
     public  int CoinCount()

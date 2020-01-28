@@ -17,6 +17,9 @@ public abstract class Status : MonoBehaviour
     protected ChangeWeather weather;
     protected PleyerController pCon;
 
+    //コイン関係
+    public CoinCountText cct;
+
     protected int beforeWeather; //天気格納用変数
     protected int nowWeather; //天気格納用変数
     protected float magnification; //倍率
@@ -37,10 +40,11 @@ public abstract class Status : MonoBehaviour
         weather = GameObject.Find("backG").GetComponent<ChangeWeather>();
         pCon = this.GetComponent<PleyerController>();
 
+        cct = GameObject.Find(pNum + "PCount").GetComponent<CoinCountText>();
 
         nowWeather = (int)weather.NowWeather();
-        
 
+        ChangeStatus();
         //powersprite = transform.GetChild(2).GetComponent<GameObject>();
 
         //audioSource = GetComponent<AudioSource>();
@@ -67,10 +71,29 @@ public abstract class Status : MonoBehaviour
         beforeWeather = nowWeather;
     }
 
+    //コイン加算
+    public virtual void GetCoin()
+    {
+        cct.AddCount(1);
+    }
+
+    //コイン減算
+    public virtual void LostCoin()
+    {
+        if (cct.NowCoin() <= 0)
+        {
+            return;
+        }
+        cct.LostCount(1);
+        pCon.Hit();
+    }
+
     /// <summary>
     /// 天候でステータス変化
     /// </summary>
     public virtual void ChangeStatus() { }
+
+    
     //{
     //powerColor = transform.GetChild(2).gameObject.GetComponent<PowerColor>();
     //switch (transform.name)

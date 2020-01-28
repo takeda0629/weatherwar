@@ -17,7 +17,7 @@ public class PAttack : MonoBehaviour
 
     GameObject _parent;
     GameObject _parent2;
-    PleyerController pcon;
+    Status pcon;
 
     //親のローカルスケール
     Transform trans;
@@ -32,8 +32,10 @@ public class PAttack : MonoBehaviour
         _parent = transform.root.gameObject;
         num = _parent.GetComponent<PlayerNoSelect>().num;
 
+        //_parent2 = transform.parent.gameObject;
+        //pcon = _parent2.GetComponent<PleyerController>();
         _parent2 = transform.parent.gameObject;
-        pcon = _parent2.GetComponent<PleyerController>();
+        pcon = _parent2.GetComponent<Status>();
         trans = _parent2.GetComponent<Transform>();
          
     }
@@ -89,9 +91,11 @@ public class PAttack : MonoBehaviour
         {
             Debug.Log("ヒット");
             pcon.GetCoin();
+            Status otSt =  other.gameObject.GetComponent<Status>();
+            otSt.LostCoin();
 
             PleyerController pc = other.gameObject.GetComponent<PleyerController>();
-            pc.LostCoin();
+            //pc.LostCoin();
             pc.Knockback(x);
 
             //Rigidbody2D rig = other.gameObject.GetComponent<Rigidbody2D>();

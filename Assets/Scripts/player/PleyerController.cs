@@ -22,7 +22,7 @@ public class PleyerController : MonoBehaviour
 
     //コイン関係
     public CoinCountText cct;
-    public int counter = 0;
+    //public int counter = 0;
 
     public float jumpP;
 
@@ -39,7 +39,7 @@ public class PleyerController : MonoBehaviour
     float mg;
 
     //被弾フラグ
-    bool hitflag;
+    public bool hitflag;
 
     ChangeWeather weather;
 
@@ -165,8 +165,8 @@ public class PleyerController : MonoBehaviour
         //通常コイン
         if (col.gameObject.tag == "Item")
         {
-            cct.AddCount();
-            counter += 1;
+            cct.AddCount(1);
+            //counter += 1;
             weather.addSaving += 0.05f;
             audioSource.clip = coinSE;
             audioSource.Play();
@@ -175,8 +175,8 @@ public class PleyerController : MonoBehaviour
         if (col.gameObject.tag == "Item2")
         {
             Debug.Log("get");
-            cct.coinCount += 10;
-            counter += 10;
+            cct.AddCount(10);
+            //counter += 10;
             audioSource.clip = coinSE;
             audioSource.Play();
         }
@@ -184,35 +184,40 @@ public class PleyerController : MonoBehaviour
 
 
     //当たり判定処理
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        //敵の攻被弾
-        if (other.gameObject.tag == "Attackobj")
-        {
-            Debug.Log("被弾");
-            LostCoin();
+    //void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    //敵の攻被弾
+    //    if (other.gameObject.tag == "Attackobj")
+    //    {
+    //        Debug.Log("被弾");
+    //        LostCoin();
             
-        }
-    }
+    //    }
+    //}
 
 
     //コイン加算
-    public void GetCoin()
-    {
-        cct.AddCount();
-        counter += 1;
-    }
+    //public void GetCoin()
+    //{
+    //    cct.AddCount(1);
+    //    //counter += 1;
+    //}
 
     //コイン減算
-    public void LostCoin()
+    //public void LostCoin()
+    //{
+    //    if (cct.coinCount <= 0)
+    //    {
+    //        return;
+    //    }
+    //    Debug.Log("やられた！！");
+    //    cct.coinCount -= 1;
+    //    //counter -= 1;
+    //    hitflag = true;
+    //}
+
+    public void Hit()
     {
-        if (cct.coinCount <= 0)
-        {
-            return;
-        }
-        Debug.Log("やられた！！");
-        cct.coinCount -= 1;
-        counter -= 1;
         hitflag = true;
     }
 

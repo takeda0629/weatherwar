@@ -10,7 +10,6 @@ public class Snow : Status
     public override void Start()
     {
         base.Start();
-        ChangeStatus();
     }
 
     // Update is called once per frame
@@ -33,6 +32,8 @@ public class Snow : Status
         //pCon.Move(magnification);
         //beforeWeather = nowWeather;
     }
+
+    
 
     public override void ChangeStatus()
     {
