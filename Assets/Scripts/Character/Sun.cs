@@ -11,7 +11,6 @@ public class Sun : Status
     public override void Start()
     {
         base.Start();
-        ChangeStatus();
         
     }
 
@@ -37,6 +36,46 @@ public class Sun : Status
 
 
     }
+
+    public override void GetCoin()
+    {
+        if(nowWeather == 0)
+        {
+            cct.AddCount(3);
+        }
+        else if(nowWeather == 1)
+        {
+            cct.AddCount(1);
+        }
+        else
+        {
+            cct.AddCount(2);
+        }
+    }
+
+    public override void LostCoin()
+    {
+        if(cct.NowCoin() <= 0)
+        {
+            return;
+        }
+
+        if(nowWeather == 0)
+        {
+            cct.LostCount(1);
+        }
+        else if(nowWeather == 1)
+        {
+            cct.LostCount(3);
+        }
+        else
+        {
+            cct.LostCount(1);
+        }
+
+        pCon.Hit();
+    }
+
     public override void ChangeStatus()
     {
         powerColor = transform.GetChild(2).gameObject.GetComponent<PowerColor>();
