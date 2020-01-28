@@ -2979,6 +2979,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signalText: {fileID: 1704028691}
+  startFlag: 0
+  second: 3
 --- !u!1 &1027505753
 GameObject:
   m_ObjectHideFlags: 0

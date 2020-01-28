@@ -26,6 +26,7 @@ public abstract class Status : MonoBehaviour
     protected float jumpP;
 
     protected PowerColor powerColor;
+    protected Signal sig;
 
     protected AudioSource audioSource;
     [SerializeField] protected AudioClip changeSE;
@@ -44,7 +45,9 @@ public abstract class Status : MonoBehaviour
 
         nowWeather = (int)weather.NowWeather();
 
-        ChangeStatus();
+        sig = GameObject.Find("Signal").GetComponent<Signal>();
+
+        //ChangeStatus();
         //powersprite = transform.GetChild(2).GetComponent<GameObject>();
 
         //audioSource = GetComponent<AudioSource>();
@@ -54,6 +57,11 @@ public abstract class Status : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
+        if(sig.StartCount() <= 0)
+        {
+            ChangeStatus();
+        }
+
         if (Input.GetButtonDown("Jump" + pNum) && pCon.CanJump())
         {
             pCon.Jump(jumpP);
