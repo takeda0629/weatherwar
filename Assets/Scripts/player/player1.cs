@@ -94,7 +94,7 @@ public class player1 : MonoBehaviour
         if (col.gameObject.tag == "Item")
         {
             Debug.Log("get");
-            cct.AddCount();
+            cct.AddCount(1);
             counter += 1;
         }
     }
