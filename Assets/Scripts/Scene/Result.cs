@@ -16,7 +16,7 @@ public class Result : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("LoadButton"))
+        if (Input.GetButtonDown("Jump"))
         {
             SceneManager.LoadScene("Title");
         }
