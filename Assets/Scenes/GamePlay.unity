@@ -3247,6 +3247,7 @@ MonoBehaviour:
   totalTime: 120
   minute: 0
   seconds: 120
+  speed: 1
 --- !u!114 &1129495315
 MonoBehaviour:
   m_ObjectHideFlags: 0

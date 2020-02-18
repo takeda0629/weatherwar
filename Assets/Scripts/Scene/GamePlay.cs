@@ -33,6 +33,7 @@ public class GamePlay : MonoBehaviour
         if(countFlag == false && timer.TimeRemaining() <= 30)
         {
             timer.ChangeTextColor();
+            timer.Blink();
         }
        
         if(timer.TimeRemaining() <= 0)

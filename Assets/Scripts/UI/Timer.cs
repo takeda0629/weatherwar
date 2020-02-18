@@ -13,11 +13,17 @@ public class Timer : MonoBehaviour
     private float oldSeconds;
     private Text timerText;
 
+    //-----------カウントダウンの点滅処理に使う-----------
+    public float speed = 0.8f;
+    private float time;
+    //---------------------------------------------------
+
     void Start()
     {     
         totalTime = minute * 60 + seconds;
         oldSeconds = 0f;
         timerText = GetComponentInChildren<Text>();
+
     }
 
 
@@ -64,10 +70,7 @@ public class Timer : MonoBehaviour
                 ((int)seconds).ToString("00");
         }
         oldSeconds = seconds;
-        //if (totalTime <= 0f)
-        //{
-
-        //}
+        
     }
 
     /// <summary>
@@ -79,8 +82,28 @@ public class Timer : MonoBehaviour
         return totalTime;
     }
 
+    /// <summary>
+    /// テキストの色を赤に変更
+    /// </summary>
     public void ChangeTextColor()
     {
         timerText.color = new Color(255f / 255f, 0f / 255f, 0f / 255f);
+    }
+
+    //Alpha値を更新してColorを返す
+    private Color GetAlphaColor(Color color)
+    {
+        time += Time.deltaTime * 5.0f * speed;
+        color.a = Mathf.Sin(time) * 0.5f + 0.5f;
+
+        return color;
+    }
+
+    /// <summary>
+    /// テキストのアルファ値変更
+    /// </summary>
+    public void Blink()
+    {
+        timerText.color = GetAlphaColor(timerText.color);
     }
 }
