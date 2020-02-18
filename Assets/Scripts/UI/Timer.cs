@@ -78,4 +78,9 @@ public class Timer : MonoBehaviour
     {
         return totalTime;
     }
+
+    public void ChangeTextColor()
+    {
+        timerText.color = new Color(255f / 255f, 0f / 255f, 0f / 255f);
+    }
 }
