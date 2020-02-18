@@ -25,8 +25,7 @@ public class Judge : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        crown = GetComponent<GameObject>();
-        crown.transform.position = new Vector3(0, 0, 1);
+
     }
 
     // Update is called once per frame
@@ -52,7 +51,8 @@ public class Judge : MonoBehaviour
         if(p1Coin > p2Coin && p1Coin > p3Coin && p1Coin > p4Coin)
         {
             Vector3  pos = new Vector3(-6.32f, 0.5f, 1f);
-            crown.transform.position = pos;
+            Instantiate(crown, pos, Quaternion.identity);
+
             wineerText.text = "Player1 の勝ち!!";
         }
         else if(p2Coin > p1Coin && p2Coin > p3Coin && p2Coin > p4Coin)
