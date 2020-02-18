@@ -1770,7 +1770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &661684362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2676,7 +2676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &936580231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2979,7 +2979,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signalText: {fileID: 1704028691}
-  startFlag: 0
   second: 3
 --- !u!1 &1027505753
 GameObject:
@@ -3246,9 +3245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807153f9e2ef50742806811949f92979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 120
+  totalTime: 30
   minute: 0
-  seconds: 120
+  seconds: 30
 --- !u!114 &1129495315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4123,7 +4122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1378328593
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,6 +22,8 @@ public class PnoText : MonoBehaviour
 
     Text pNo;
 
+    private Vector3 setScale = Vector3.zero;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,13 +33,15 @@ public class PnoText : MonoBehaviour
         //pNo = this.gameObject.GetComponent<Text>();
         //pNo.text = string.Format("{0}P", pNum);
 
-        
+        setScale = this.transform.lossyScale;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Camera.main.transform.rotation;
+        this.transform.localScale = new Vector3(Mathf.Abs(setScale.x), setScale.y, setScale.z);
+        Debug.Log("setScale:" + setScale);
+        Debug.Log("localScale" + transform.localScale);
     }
 }
