@@ -12,6 +12,8 @@ public class GamePlay : MonoBehaviour
     static CoinCountText p3Count;
     static CoinCountText p4Count;
 
+    private bool countFlag = false;
+
     static int[] finCoin;
 
     // Start is called before the first frame update
@@ -28,6 +30,10 @@ public class GamePlay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(countFlag == false && timer.TimeRemaining() <= 30)
+        {
+            timer.ChangeTextColor();
+        }
        
         if(timer.TimeRemaining() <= 0)
         {
