@@ -27,6 +27,7 @@ public abstract class Status : MonoBehaviour
 
     protected PowerColor powerColor;
     protected Signal sig;
+    protected GamePlay gamePlay;
 
     protected AudioSource audioSource;
     [SerializeField] protected AudioClip changeSE;
@@ -47,6 +48,7 @@ public abstract class Status : MonoBehaviour
 
         sig = GameObject.Find("Signal").GetComponent<Signal>();
 
+        gamePlay = GameObject.Find("GamePlayScene").GetComponent<GamePlay>();
         //ChangeStatus();
         //powersprite = transform.GetChild(2).GetComponent<GameObject>();
 
@@ -57,12 +59,19 @@ public abstract class Status : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
-        if(sig.StartCount() <= 0)
+
+        if(sig.StartCount() < 0 && gamePlay.IsGame() == false)
         {
             ChangeStatus();
+            
         }
 
-        if (Input.GetButtonDown("Jump" + pNum) && pCon.CanJump())
+        if(gamePlay.IsGame() == false)
+        {
+            return;
+        }
+
+        if (Input.GetButtonDown("Jump" + pNum) && pCon.CanJump() && gamePlay.IsGame() == true)
         {
             pCon.Jump(jumpP);
         }
