@@ -13,16 +13,10 @@ public class Signal : MonoBehaviour
     public AudioClip countdownSE;
     public AudioClip whistleSE;
 
-    bool Three;
-    bool Two;
-    bool One;
-    bool Go;
-
     void Start()
     {
         StartCoroutine(Countdown(second));
         audioSource = GetComponent<AudioSource>();
-        Three = true;
     }
 
 
@@ -58,29 +52,32 @@ public class Signal : MonoBehaviour
         Debug.Log(second);
         second -= Time.deltaTime;
 
-        if (second == 3)
+        if (second >= 2.9f && second <= 2.91f)
         {
-            audioSource.clip = countdownSE;
-            audioSource.Play();
+            //audioSource.clip = countdownSE;
+            //audioSource.Play();
+            audioSource.PlayOneShot(countdownSE);
             Debug.Log("3");
         }
-        else if (second >= 2 && second <= 3)
+        else if (second >= 2 && second <= 2.01f)
         {
-            audioSource.clip = countdownSE;
-            audioSource.Play();
+            //audioSource.clip = countdownSE;
+            //audioSource.Play();
+            audioSource.PlayOneShot(countdownSE);
             Debug.Log("2");
         }
-        else if (second >= 1 && second <= 2)
+        else if (second >= 1 && second <= 1.01f)
         {
-            audioSource.clip = countdownSE;
-            audioSource.Play();
+            //audioSource.clip = countdownSE;
+            //audioSource.Play();
+            audioSource.PlayOneShot(countdownSE);
             Debug.Log("1");
         }
-        else if (second <=1 && second >= 0)
+        else if (second >= 0 && second <= 0.01f)
         {
-            audioSource.clip = whistleSE;
-            audioSource.Play();
-            
+            //audioSource.clip = whistleSE;
+            //audioSource.Play();
+            audioSource.PlayOneShot(whistleSE);
             Debug.Log("Go");
         }
         else
