@@ -326,8 +326,8 @@ MonoBehaviour:
   playerNo: 4
   gameChara:
   - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
-  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
   - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
+  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
   - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
   image: {fileID: 411956988}
 --- !u!1 &432002781
@@ -826,8 +826,8 @@ MonoBehaviour:
   playerNo: 1
   gameChara:
   - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
-  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
   - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
+  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
   - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
   image: {fileID: 679295998}
 --- !u!1 &822539379
@@ -1471,8 +1471,8 @@ MonoBehaviour:
   playerNo: 2
   gameChara:
   - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
-  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
   - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
+  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
   - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
   image: {fileID: 1719408149}
 --- !u!1 &1777958611
@@ -1565,8 +1565,8 @@ MonoBehaviour:
   playerNo: 3
   gameChara:
   - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
-  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
   - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
+  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
   - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
   image: {fileID: 1777958613}
 --- !u!1 &1850668057
