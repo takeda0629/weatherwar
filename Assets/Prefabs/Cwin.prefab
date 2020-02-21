@@ -290,16 +290,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb0cfb9c945f6fe42bc5fd3830bfbcee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 6
   isSelectFlag: 0
   playerNo: 1
   cct: {fileID: 0}
-  counter: 0
-  jumpP: 7
+  jumpP: 6
   widthRight: 9.05
   widthLeft: -9.05
   loop: 18
   canJump: 0
+  hitflag: 0
   jumpSE: {fileID: 8300000, guid: 258fd1fa6fa45ed46bf55a5e690110c4, type: 3}
   coinSE: {fileID: 8300000, guid: c53bf3c0ba648dc4ab7f0ad8592f2efc, type: 3}
   damageSE: {fileID: 8300000, guid: 35bf222a6952ec043a460f27b2a723d0, type: 3}
@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3af3690305c2e418acad56526277f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cct: {fileID: 0}
   changeSE: {fileID: 0}
 --- !u!82 &425601170488745972
 AudioSource:
