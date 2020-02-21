@@ -55,24 +55,31 @@ public class Judge : MonoBehaviour
             Instantiate(crown, pos, Quaternion.identity);
 
             wineerText.text = "Player1 の勝ち!!";
+            drawText.text = "";
         }
         else if(p2Coin > p1Coin && p2Coin > p3Coin && p2Coin > p4Coin)
         {
             Vector3 pos = new Vector3(-2.7f, 0.5f, 1f);
             crown.transform.position = pos;
+            Instantiate(crown, pos, Quaternion.identity);
             wineerText.text = "Player2 の勝ち!!";
+            drawText.text = "";
         }
         else if(p3Coin > p1Coin && p3Coin > p2Coin && p3Coin > p4Coin)
         {
             Vector3 pos = new Vector3(2.1f, 0.5f, 1f);
             crown.transform.position = pos;
+            Instantiate(crown, pos, Quaternion.identity);
             wineerText.text = "Player3 の勝ち!!";
+            drawText.text = "";
         }
         else if(p4Coin > p1Coin && p4Coin > p2Coin && p4Coin > p3Coin)
         {
             Vector3 pos = new Vector3(6.57f, 0.5f, 1f);
             crown.transform.position = pos;
+            Instantiate(crown, pos, Quaternion.identity);
             wineerText.text = "Player4 の勝ち!!";
+            drawText.text = "";
         }
         else
         {
