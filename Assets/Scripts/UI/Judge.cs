@@ -17,6 +17,7 @@ public class Judge : MonoBehaviour
     int p4Coin;
 
     [SerializeField] Text wineerText;
+    [SerializeField] Text drawText;
 
     bool once = true;
 
@@ -77,6 +78,7 @@ public class Judge : MonoBehaviour
         {
             crown.SetActive(false);
             wineerText.text = "1位が誰だっていいじゃないか。人間だもの。\n ウェザ男";
+            drawText.text = "引き分け";
         }
 
         once = false;
