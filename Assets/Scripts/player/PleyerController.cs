@@ -178,7 +178,7 @@ public class PleyerController : MonoBehaviour
         {
             cct.AddCount(1);
             //counter += 1;
-            weather.addSaving += 0.05f;
+            weather.addSaving += 0.5f;
             audioSource.clip = coinSE;
             audioSource.Play();
         }

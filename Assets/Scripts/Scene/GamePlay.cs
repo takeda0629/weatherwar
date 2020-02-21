@@ -49,7 +49,7 @@ public class GamePlay : MonoBehaviour
         {
             cdText.SetActive(true);
             gameFlag = false;
-            Invoke("LoadScene", 2);
+            Invoke("LoadScene", 3);
         }
     }
 
