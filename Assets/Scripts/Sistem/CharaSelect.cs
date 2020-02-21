@@ -70,23 +70,6 @@ public class CharaSelect : MonoBehaviour
 
         if (choose > 0 && beforeChoose == 0.0f && decideFlag == false)
         {
-            selectNo++;
-            charaNo++;
-            if (selectNo > 3)
-            {
-                selectNo = 0;
-            }
-            if(charaNo > 4)
-            {
-                charaNo = 1;
-            }
-            sprite = gameChara[selectNo];
-            image = this.GetComponent<Image>();
-            image.sprite = sprite;
-
-        }
-        else if (choose < 0 && beforeChoose == 0.0f && decideFlag == false)
-        {
             selectNo--;
             charaNo--;
             if (selectNo < 0)
@@ -96,6 +79,23 @@ public class CharaSelect : MonoBehaviour
             if(charaNo < 1)
             {
                 charaNo = 4;
+            }
+            sprite = gameChara[selectNo];
+            image = this.GetComponent<Image>();
+            image.sprite = sprite;
+
+        }
+        else if (choose < 0 && beforeChoose == 0.0f && decideFlag == false)
+        {
+            selectNo++;
+            charaNo++;
+            if (selectNo > 3)
+            {
+                selectNo = 0;
+            }
+            if(charaNo > 4)
+            {
+                charaNo = 1;
             }
             sprite = gameChara[selectNo];
             image = this.GetComponent<Image>();
