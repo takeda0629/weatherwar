@@ -6,10 +6,17 @@ using UnityEngine.UI;
 public class LastCountDown : MonoBehaviour
 {
     [SerializeField] private Text countDownText;
+    public AudioClip endSE;
+
+    AudioSource audio;
 
     void Awake()
     {
+        audio = gameObject.GetComponent<AudioSource>();
+        audio.PlayOneShot(endSE);
+
         countDownText.text = "TIME UP!!";
+
         //StartCoroutine(Countdown());
     }
 
