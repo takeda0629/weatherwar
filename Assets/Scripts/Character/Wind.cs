@@ -41,19 +41,19 @@ using UnityEngine;
         if (nowWeather == 2)
         {
             jumpP = 1.0f;
-            magnification = 1.5f;
+            magnification = 2.0f;
             powerColor.SpriteOn();
         }
         else if (nowWeather == 3)
         {
             jumpP = 1.0f;
-            magnification = 0.6f;
+            magnification = -2f;
             powerColor.SpriteOff();
         }
         else
         {
             jumpP = 1.0f;
-            magnification = 1.0f;
+            magnification = 1.25f;
             powerColor.SpriteOff();
         }
     }
