@@ -81,20 +81,20 @@ public class Sun : Status
         powerColor = transform.GetChild(2).gameObject.GetComponent<PowerColor>();
         if (nowWeather == 0)
         {
-            jumpP = 1.0f;
-            magnification = 1.1f;
+            jumpP = 1.0f; 
+            magnification =0f; //6
             powerColor.SpriteOn();
         }
         else if (nowWeather == 1)
         {
             jumpP = 1.0f;
-            magnification = 0.9f;
+            magnification = -1.0f; //6-1 = 5;
             powerColor.SpriteOff();
         }
         else
         {
             jumpP = 1.0f;
-            magnification = 0.9f;
+            magnification = -0.5f;//5.5
             powerColor.SpriteOff();
         }
     }

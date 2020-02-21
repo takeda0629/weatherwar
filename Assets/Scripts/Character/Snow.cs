@@ -40,20 +40,20 @@ public class Snow : Status
         powerColor = transform.GetChild(2).gameObject.GetComponent<PowerColor>();
         if (nowWeather == 3)
         {
-            jumpP = 1.2f;
-            magnification = 1.3f;
+            jumpP = 1.0f;
+            magnification = 0.5f;
             powerColor.SpriteOn();
         }
         else if (nowWeather == 0)
         {
-            jumpP = 0.9f;
-            magnification = 0.8f;
+            jumpP = 1.0f;
+            magnification = 0.5f;
             powerColor.SpriteOff();
         }
         else
         {
-            jumpP = 1.1f;
-            magnification = 1.15f;
+            jumpP = 1.0f;
+            magnification = 0f;
             powerColor.SpriteOff();
         }
     }

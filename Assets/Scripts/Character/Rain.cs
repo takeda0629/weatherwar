@@ -42,20 +42,20 @@ public class Rain : Status
         powerColor = transform.GetChild(2).gameObject.GetComponent<PowerColor>();
         if (nowWeather == 1)
         {
-            jumpP = 1.5f;
-            magnification = 1.0f;
+            jumpP = 1.42f;
+            magnification = 1.5f; //7.5
             powerColor.SpriteOn();
         }
         else if (nowWeather == 2)
         {
-            jumpP = 0.84f;
-            magnification = 1.0f;
+            jumpP = 1.0f;
+            magnification = 0.2f;//5.8
             powerColor.SpriteOff();
         }
         else
         {
-            jumpP = 1.3f;
-            magnification = 1.0f;
+            jumpP = 1.0f;
+            magnification = 0.2f;//5.8
             powerColor.SpriteOff();
         }
     }

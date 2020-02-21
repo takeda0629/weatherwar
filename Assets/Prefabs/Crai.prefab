@@ -201,11 +201,11 @@ GameObject:
   - component: {fileID: 1420618640594166949}
   - component: {fileID: 1420618640594166946}
   - component: {fileID: 1420618640594166951}
+  - component: {fileID: 8420588792397628315}
   - component: {fileID: 1420618640594166948}
   - component: {fileID: 1420618640594166947}
   - component: {fileID: 1420618640594166950}
   - component: {fileID: 5662525297171434738}
-  - component: {fileID: 8420588792397628315}
   m_Layer: 0
   m_Name: Crai
   m_TagString: Player
@@ -294,7 +294,7 @@ MonoBehaviour:
   isSelectFlag: 0
   playerNo: 1
   cct: {fileID: 0}
-  jumpP: 6
+  jumpP: 7.2
   widthRight: 9.05
   widthLeft: -9.05
   loop: 18
@@ -304,6 +304,20 @@ MonoBehaviour:
   coinSE: {fileID: 8300000, guid: c53bf3c0ba648dc4ab7f0ad8592f2efc, type: 3}
   damageSE: {fileID: 8300000, guid: 35bf222a6952ec043a460f27b2a723d0, type: 3}
   charStatus: {fileID: 0}
+--- !u!114 &8420588792397628315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420618640594166944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710b995ba6b61724c8972986c2b8906b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cct: {fileID: 0}
+  changeSE: {fileID: 0}
 --- !u!114 &1420618640594166948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,20 +474,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8420588792397628315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420618640594166944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 710b995ba6b61724c8972986c2b8906b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cct: {fileID: 0}
-  changeSE: {fileID: 0}
 --- !u!1 &4032555322975662949
 GameObject:
   m_ObjectHideFlags: 0

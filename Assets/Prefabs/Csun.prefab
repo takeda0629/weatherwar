@@ -316,7 +316,7 @@ MonoBehaviour:
   isSelectFlag: 0
   playerNo: 1
   cct: {fileID: 0}
-  jumpP: 6
+  jumpP: 7.2
   widthRight: 9.05
   widthLeft: -9.05
   loop: 18
