@@ -83,15 +83,26 @@ public class PleyerController : MonoBehaviour
     /// </summary>
     public void Move(float magnification)
     {
+        int jumpvel = 1;
+
         if(hitflag == true)
         {
             return;
         }
 
+        if(canJump)
+        {
+            jumpvel = 1;
+        }
+        else
+        {
+            jumpvel = 2;
+        }
+
         Vector2 velocity = rb.velocity;
 
         //float x = Input.GetAxisRaw("Horizontal" + (int)playerNo)*speed;
-        float x = (magnification +speed) * Input.GetAxisRaw("Horizontal" + pNum)  ;//キャラクターセレクト連動
+        float x = (magnification + speed) * Input.GetAxisRaw("Horizontal" + pNum) / jumpvel ;//キャラクターセレクト連動
         //float y = Input.GetAxisRaw("Vertical" + (int)playerNo);
         //float y = Input.GetAxisRaw("Vertical" + pNum);
         Vector2 dir = new Vector2(x, velocity.y);
