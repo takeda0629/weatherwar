@@ -17,6 +17,11 @@ public class CoinCountText : MonoBehaviour
 
     void Update()
     {
+        if(coinCount < 0 || finCoin < 0)
+        {
+            coinCount = 0;
+            finCoin = 0;
+        }
         countText.text = coinCount.ToString();
     }
 

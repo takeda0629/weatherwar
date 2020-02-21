@@ -12,9 +12,11 @@ public class GamePlay : MonoBehaviour
     static CoinCountText p3Count;
     static CoinCountText p4Count;
 
-    private bool countFlag = false;
+    private bool gameFlag = false;
 
     static int[] finCoin;
+
+    [SerializeField] GameObject cdText;
 
     // Start is called before the first frame update
     void Start()
@@ -24,21 +26,30 @@ public class GamePlay : MonoBehaviour
         p3Count = GameObject.Find("3PCount").GetComponent<CoinCountText>();
         p4Count = GameObject.Find("4PCount").GetComponent<CoinCountText>();
 
+        
+
         finCoin = new int[4];
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(countFlag == false && timer.TimeRemaining() <= 30)
+        if(gameFlag == false && timer.TimeRemaining() < 120 && timer.TimeRemaining() > 0)
+        {
+            gameFlag = true;
+        }
+
+        if(gameFlag == true && timer.TimeRemaining() <= 30)
         {
             timer.ChangeTextColor();
+            timer.Blink();
         }
-       
-        if(timer.TimeRemaining() <= 0)
+
+        if (gameFlag == true && timer.TimeRemaining() <= 0)
         {
-            
-            SceneManager.LoadScene("Result");
+            cdText.SetActive(true);
+            gameFlag = false;
+            Invoke("LoadScene", 2);
         }
     }
 
@@ -55,5 +66,15 @@ public class GamePlay : MonoBehaviour
         finCoin[3] = p4coin;
 
         return finCoin;
+    }
+
+    void LoadScene()
+    {
+        SceneManager.LoadScene("Result");
+    }
+
+    public bool IsGame()
+    {
+        return gameFlag;
     }
 }
