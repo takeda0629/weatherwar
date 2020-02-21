@@ -942,7 +942,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 738d130108e1ca945a2f32424f1d2029, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -973,10 +973,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNo: 4
   gameChara:
-  - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
-  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
-  - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
-  - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
+  - {fileID: 21300000, guid: 738d130108e1ca945a2f32424f1d2029, type: 3}
+  - {fileID: 21300000, guid: a61e7042742927b488ab149253038fea, type: 3}
+  - {fileID: 21300000, guid: 6223861a0430c2c479b4575316299079, type: 3}
+  - {fileID: 21300000, guid: 349c93dd46d51834fbbdfc950ad76284, type: 3}
   charaNo: 1
   image: {fileID: 982313247}
   decideFlag: 0
@@ -1039,7 +1039,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 738d130108e1ca945a2f32424f1d2029, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1070,10 +1070,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNo: 2
   gameChara:
-  - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
-  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
-  - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
-  - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
+  - {fileID: 21300000, guid: 738d130108e1ca945a2f32424f1d2029, type: 3}
+  - {fileID: 21300000, guid: a61e7042742927b488ab149253038fea, type: 3}
+  - {fileID: 21300000, guid: 6223861a0430c2c479b4575316299079, type: 3}
+  - {fileID: 21300000, guid: 349c93dd46d51834fbbdfc950ad76284, type: 3}
   charaNo: 1
   image: {fileID: 1003852741}
   decideFlag: 0
@@ -1375,7 +1375,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 738d130108e1ca945a2f32424f1d2029, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1406,10 +1406,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNo: 1
   gameChara:
-  - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
-  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
-  - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
-  - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
+  - {fileID: 21300000, guid: 738d130108e1ca945a2f32424f1d2029, type: 3}
+  - {fileID: 21300000, guid: a61e7042742927b488ab149253038fea, type: 3}
+  - {fileID: 21300000, guid: 6223861a0430c2c479b4575316299079, type: 3}
+  - {fileID: 21300000, guid: 349c93dd46d51834fbbdfc950ad76284, type: 3}
   charaNo: 1
   image: {fileID: 1397374969}
   decideFlag: 0
@@ -1538,7 +1538,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 738d130108e1ca945a2f32424f1d2029, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1569,10 +1569,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNo: 3
   gameChara:
-  - {fileID: 21300000, guid: 9faa6e23be101e44e8574cc4b91f8b9b, type: 3}
-  - {fileID: 21300000, guid: 4e976258714ece042a6867a57f5d7fab, type: 3}
-  - {fileID: 21300000, guid: 293d29ddf90b6a8488978c75ed663b08, type: 3}
-  - {fileID: 21300000, guid: b6071060cd989774da1c7e692d9cd1f3, type: 3}
+  - {fileID: 21300000, guid: 738d130108e1ca945a2f32424f1d2029, type: 3}
+  - {fileID: 21300000, guid: a61e7042742927b488ab149253038fea, type: 3}
+  - {fileID: 21300000, guid: 6223861a0430c2c479b4575316299079, type: 3}
+  - {fileID: 21300000, guid: 349c93dd46d51834fbbdfc950ad76284, type: 3}
   charaNo: 1
   image: {fileID: 1425005614}
   decideFlag: 0
